@@ -27,8 +27,8 @@ Tu as validé la théorie ? Excellent ! Ici, tu vas suivre une **voie plus progr
 
 Tu vas travailler sur le **Projet Fil Rouge : Intégration d'une Maquette Web**.
 
-- **Départ** : [`/projects/fondamentaux-web-integration/ch01-start/`](../../../../projects/fondamentaux-web-integration/)
-- **Référence** : [`/projects/fondamentaux-web-integration/ch01-end/`](../../../../projects/fondamentaux-web-integration/)
+- **Départ** : `/projects/fondamentaux-web-integration/ch01-start/`
+- **Référence** : `/projects/fondamentaux-web-integration/ch01-end/`
 
 Le fil rouge évolue avec toi : chaque chapitre ajoute des couches (HTML → CSS → JavaScript).
 

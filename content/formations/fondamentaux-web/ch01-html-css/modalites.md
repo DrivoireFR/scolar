@@ -34,7 +34,7 @@ Tous ces TPs utiliseront le **Projet Fil Rouge : Intégration d'une Maquette Web
 ✅ Branchement rapide vers le chapitre suivant  
 ❌ Moins de continuité narrative entre TPs  
 
-👉 **Commencer la modalité A** : [TP Intensif](./modalite-tp.md)
+👉 **Commencer la modalité A** : [TP Intensif](/formations/fondamentaux-web/ch01-html-css/modalite-tp)
 
 ---
 
@@ -60,7 +60,7 @@ Tu vas progresser sur le **Projet Fil Rouge : Intégration d'une Maquette Web** 
 ✅ Compréhension globale du workflow  
 ❌ Plus long, demande plus de temps bloqué  
 
-👉 **Commencer la modalité B** : [Projet Progressif](./modalite-projet.md)
+👉 **Commencer la modalité B** : [Projet Progressif](/formations/fondamentaux-web/ch01-html-css/modalite-projet)
 
 ---
 

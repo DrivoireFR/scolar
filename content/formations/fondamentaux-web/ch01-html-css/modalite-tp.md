@@ -31,13 +31,13 @@ Chaque TP se complète en **1-2 heures** et compile une compétence spécifique 
 
 Pour cette modalité, tu vas utiliser le **Projet Fil Rouge : Intégration d'une Maquette Web**.
 
-Fichiers de départ : [`/projects/fondamentaux-web-integration/ch01-start/`](../../../../projects/fondamentaux-web-integration/)
+Fichiers de départ : `/projects/fondamentaux-web-integration/ch01-start/`
 
 - `index.html` - Structure HTML de base (blog Scolar)
 - `styles.css` - Fichier CSS initial (vide ou minimal)
 - `figma-mockup.md` - Référence à la maquette à intégrer
 
-Après le chapitre, tu pourras comparer ta solution avec la référence : [`/projects/fondamentaux-web-integration/ch01-end/`](../../../../projects/fondamentaux-web-integration/)
+Après le chapitre, tu pourras comparer ta solution avec la référence : `/projects/fondamentaux-web-integration/ch01-end/`
 
 ---
 

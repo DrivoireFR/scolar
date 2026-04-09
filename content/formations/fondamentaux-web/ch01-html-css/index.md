@@ -197,8 +197,8 @@ body { font-size: 14px; }
 
 Avant de passer à la pratique, valide ta compréhension avec le **quizz de validation** :
 
-👉 [Quizz de validation](./quiz-validation.json)
+👉 [Quizz de validation](/formations/fondamentaux-web/ch01-html-css/quiz-validation)
 
 Une fois le quizz réussi (≥ 70%), **choisis une modalité pratique** pour mettre en pratique :
 
-👉 [Voir les modalités disponibles](./modalites.md)
+👉 [Voir les modalités disponibles](/formations/fondamentaux-web/ch01-html-css/modalites)
