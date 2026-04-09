@@ -4,11 +4,12 @@ const role = route.params.role as string
 const chapter = route.params.chapter as string
 const section = route.params.section as string
 
-// Chemin Nuxt Content pour la section du chapitre
-const contentPath = `/formations/${role}/${chapter}/${section}`
+// Chercher le fichier de la section
+// Le chemin complet est: /formations/{role}/{chapter}/{section}
+const contentPath = `formations/${role}/${chapter}/${section}`
 
 const { data: sectionData } = await useAsyncData(`section-${role}-${chapter}-${section}`, () =>
-  queryContent(contentPath).findOne(),
+  queryContent().where({ _path: new RegExp(`^/${contentPath}$`) }).findOne(),
 )
 
 if (!sectionData.value) {

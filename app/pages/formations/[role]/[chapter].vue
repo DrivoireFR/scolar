@@ -3,17 +3,18 @@ const route = useRoute()
 const role = route.params.role as string
 const chapter = route.params.chapter as string
 
-// Chemin Nuxt Content pour le chapitre (fichier index.md)
-const contentPath = `/formations/${role}/${chapter}`
+// Chercher le fichier index.md du chapitre
+// Le chemin complet est: /formations/{role}/{chapter}/index
+const contentPath = `formations/${role}/${chapter}/index`
 
 const { data: chapterData } = await useAsyncData(`chapter-${role}-${chapter}`, () =>
-  queryContent(contentPath).findOne(),
+  queryContent().where({ _path: new RegExp(`^/${contentPath}$`) }).findOne(),
 )
 
 if (!chapterData.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: `Chapitre ${chapter} introuvable dans ${contentPath}`
+    statusMessage: `Chapitre ${chapter} introuvable`
   })
 }
 
