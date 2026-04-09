@@ -5,7 +5,10 @@ export default defineContentConfig({
   collections: {
     blog: defineCollection({
       type: 'page',
-      source: '**',
+      source: {
+        include: '**',
+        exclude: ['formations/**'],
+      },
       schema: z.object({
         title: z.string(),
         description: z.string().optional(),
@@ -23,6 +26,21 @@ export default defineContentConfig({
         }).optional(),
       }),
       indexes: [{ columns: ['date'] }, { columns: ['category'] }],
+    }),
+    formations: defineCollection({
+      type: 'page',
+      source: 'formations/**',
+      schema: z.object({
+        title: z.string(),
+        description: z.string().optional(),
+        type: z.string().optional(),
+        parent: z.string().nullable().optional(),
+        role: z.string().optional(),
+        order: z.number().optional(),
+        duration: z.string().optional(),
+        difficulty: z.string().optional(),
+        modalityType: z.string().optional(),
+      }),
     }),
   },
 })

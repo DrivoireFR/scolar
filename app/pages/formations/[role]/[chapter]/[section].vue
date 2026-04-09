@@ -4,15 +4,16 @@ const role = route.params.role as string
 const chapter = route.params.chapter as string
 const section = route.params.section as string
 
-// Chercher le fichier de la section
+const sectionPath = `/formations/${role}/${chapter}/${section}`
+
 const { data: sectionData } = await useAsyncData(`section-${role}-${chapter}-${section}`, () =>
-  queryContent(`formations`, role, chapter, section).findOne(),
+  queryCollection('formations').path(sectionPath).first(),
 )
 
 if (!sectionData.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: `Section ${section} du chapitre ${chapter} introuvable`
+    statusMessage: `Section introuvable : ${sectionPath}`
   })
 }
 

@@ -3,17 +3,20 @@ const route = useRoute()
 const role = route.params.role as string
 const chapter = route.params.chapter as string
 
-// Le chemin Nuxt Content pour un dossier avec index.md
-// Quand on a /formations/role/chapter/index.md,
-// Nuxt Content le rend accessible via le chemin du dossier
+// En Nuxt Content v3, on utilise queryCollection() + .path()
+// Le path correspond au chemin du fichier sans /content et sans extension
+// /content/formations/role/chapter/index.md → path = /formations/role/chapter/index
+// ou /formations/role/chapter (pour index.md dans un dossier)
+const chapterPath = `/formations/${role}/${chapter}`
+
 const { data: chapterData } = await useAsyncData(`chapter-${role}-${chapter}`, () =>
-  queryContent(`formations`, role, chapter).findOne(),
+  queryCollection('formations').path(chapterPath).first(),
 )
 
 if (!chapterData.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: `Chapitre ${chapter} introuvable dans formations/${role}/${chapter}`
+    statusMessage: `Chapitre introuvable : ${chapterPath}`
   })
 }
 
@@ -21,11 +24,9 @@ useSeoMeta({
   title: chapterData.value.title,
 })
 
-// Labels
 const roleLabels: Record<string, string> = {
   'fondamentaux-web': 'Fondamentaux et intégration Web',
 }
-
 const roleName = roleLabels[role] ?? role
 </script>
 
