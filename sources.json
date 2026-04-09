@@ -1,0 +1,242 @@
+{
+  "newsletter": {
+    "name": "Tech Newsletter",
+    "description": "Multi-domain tech news aggregator",
+    "frequency": "weekly",
+    "run_day": "Thursday",
+    "run_time": "09:00"
+  },
+  "sources": [
+    {
+      "category": "frontend",
+      "name": "Frontend Focused Sources",
+      "interests": ["React", "Vue.js", "Svelte", "CSS", "Performance", "UX", "Accessibility"],
+      "sites": [
+        {
+          "name": "CSS-Tricks",
+          "url": "https://css-tricks.com",
+          "priority": "high"
+        },
+        {
+          "name": "Dev.to Frontend",
+          "url": "https://dev.to/t/frontend",
+          "priority": "high"
+        },
+        {
+          "name": "Web.dev",
+          "url": "https://web.dev",
+          "priority": "high"
+        },
+        {
+          "name": "JavaScript Weekly",
+          "url": "https://javascriptweekly.com",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "category": "backend",
+      "name": "Backend & API Development",
+      "interests": ["Node.js", "Python", "APIs", "Architecture", "Microservices", "Database Connectors"],
+      "sites": [
+        {
+          "name": "Node.js Blog",
+          "url": "https://nodejs.org/en/blog",
+          "priority": "high"
+        },
+        {
+          "name": "Dev.to Backend",
+          "url": "https://dev.to/t/backend",
+          "priority": "high"
+        },
+        {
+          "name": "DZone",
+          "url": "https://dzone.com",
+          "priority": "medium"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "category": "devops",
+      "name": "DevOps & Deployment",
+      "interests": ["Docker", "Kubernetes", "CI/CD", "Monitoring", "Infrastructure", "Cloud"],
+      "sites": [
+        {
+          "name": "Docker Blog",
+          "url": "https://www.docker.com/blog",
+          "priority": "high"
+        },
+        {
+          "name": "Kubernetes Blog",
+          "url": "https://kubernetes.io/blog",
+          "priority": "high"
+        },
+        {
+          "name": "Dev.to DevOps",
+          "url": "https://dev.to/t/devops",
+          "priority": "medium"
+        },
+        {
+          "name": "The New Stack",
+          "url": "https://thenewstack.io",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "category": "sys-admin",
+      "name": "System Administration",
+      "interests": ["Linux", "Networking", "Security", "System Performance", "Administration Tools"],
+      "sites": [
+        {
+          "name": "Linux Journal",
+          "url": "https://www.linuxjournal.com",
+          "priority": "medium"
+        },
+        {
+          "name": "Arch Linux News",
+          "url": "https://www.archlinux.org",
+          "priority": "medium"
+        },
+        {
+          "name": "Dev.to SysAdmin",
+          "url": "https://dev.to/t/sysadmin",
+          "priority": "medium"
+        },
+        {
+          "name": "Ubuntu Blog",
+          "url": "https://ubuntu.com/blog",
+          "priority": "low"
+        }
+      ]
+    },
+    {
+      "category": "database",
+      "name": "Database & Data Architecture",
+      "interests": ["SQL", "NoSQL", "Query Optimization", "Data Design", "Performance"],
+      "sites": [
+        {
+          "name": "PostgreSQL Blog",
+          "url": "https://www.postgresql.org/about/news",
+          "priority": "high"
+        },
+        {
+          "name": "MongoDB Blog",
+          "url": "https://www.mongodb.com/blog",
+          "priority": "medium"
+        },
+        {
+          "name": "Dev.to Database",
+          "url": "https://dev.to/t/database",
+          "priority": "medium"
+        },
+        {
+          "name": "Redis Blog",
+          "url": "https://redis.com/blog",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "category": "animation-css",
+      "name": "CSS & Web Animations",
+      "interests": ["CSS Animations", "Transitions", "Effects", "Web Design Trends", "Performance"],
+      "sites": [
+        {
+          "name": "CodePen",
+          "url": "https://codepen.io",
+          "priority": "high"
+        },
+        {
+          "name": "Animation Weekly",
+          "url": "https://mailchi.mp/8c5dd4df6e3e",
+          "priority": "high"
+        },
+        {
+          "name": "CSS-Tricks Animation",
+          "url": "https://css-tricks.com/animation",
+          "priority": "high"
+        },
+        {
+          "name": "Dev.to CSS",
+          "url": "https://dev.to/t/css",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "category": "animation-3d",
+      "name": "3D Web & WebGL",
+      "interests": ["Three.js", "Babylon.js", "WebGL", "3D Graphics", "Shaders", "Web3D"],
+      "sites": [
+        {
+          "name": "Three.js Docs",
+          "url": "https://threejs.org",
+          "priority": "high"
+        },
+        {
+          "name": "Babylon.js",
+          "url": "https://www.babylonjs-playground.com",
+          "priority": "high"
+        },
+        {
+          "name": "Dev.to 3D/WebGL",
+          "url": "https://dev.to/search?q=threejs",
+          "priority": "medium"
+        },
+        {
+          "name": "WebGL Academy",
+          "url": "https://www.webglacademy.com",
+          "priority": "low"
+        }
+      ]
+    },
+    {
+      "category": "strat-mobile",
+      "name": "Mobile Strategy & Development",
+      "interests": ["React Native", "Flutter", "Mobile UX", "Progressive Web Apps", "Responsive Design"],
+      "sites": [
+        {
+          "name": "React Native Blog",
+          "url": "https://reactnative.dev/blog",
+          "priority": "high"
+        },
+        {
+          "name": "Flutter Blog",
+          "url": "https://flutter.dev/blog",
+          "priority": "high"
+        },
+        {
+          "name": "Mobile Dev Weekly",
+          "url": "https://mobiledevweekly.com",
+          "priority": "medium"
+        },
+        {
+          "name": "Dev.to Mobile",
+          "url": "https://dev.to/t/mobile",
+          "priority": "medium"
+        }
+      ]
+    }
+  ],
+  "search_preferences": {
+    "max_age_days": 7,
+    "min_relevance_score": 0.7,
+    "language": "en",
+    "include_paywalled": false,
+    "exclude_keywords": ["sponsored", "advertisement", "promoted"],
+    "output_format": "markdown",
+    "timezone": "UTC"
+  },
+  "filtering": {
+    "minimum_quality": "medium",
+    "duplicate_detection": true,
+    "remove_duplicates_across_categories": false,
+    "deduplicate_by": "url"
+  }
+}

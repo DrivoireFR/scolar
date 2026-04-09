@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "title": "Validation théorie — HTML & CSS Fondamentaux",
+  "description": "Valide ta compréhension avant de passer à la pratique",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quel élément HTML représente le contenu principal d'une page ?",
+      "choices": [
+        { "id": "a", "label": "<header>" },
+        { "id": "b", "label": "<main>" },
+        { "id": "c", "label": "<article>" },
+        { "id": "d", "label": "<section>" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! <main> est l'élément sémantique pour le contenu principal.",
+        "incorrect": "❌ Pas tout à fait. <main> est l'élément qui délimite le contenu principal."
+      }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Quelle propriété CSS est utilisée pour créer un layout flexible en une dimension ?",
+      "choices": [
+        { "id": "a", "label": "display: grid" },
+        { "id": "b", "label": "display: flex" },
+        { "id": "c", "label": "position: absolute" },
+        { "id": "d", "label": "float: left" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! Flexbox crée des layouts flexibles en ligne ou colonne.",
+        "incorrect": "❌ Non, Grid est bidimensionnel. Flexbox est unidimensionnel."
+      }
+    },
+    {
+      "id": "q3",
+      "type": "multiple",
+      "prompt": "Quels éléments sont sémantiques en HTML5 ? (plusieurs réponses)",
+      "choices": [
+        { "id": "a", "label": "<header>" },
+        { "id": "b", "label": "<div>" },
+        { "id": "c", "label": "<footer>" },
+        { "id": "d", "label": "<nav>" }
+      ],
+      "correctChoiceIds": ["a", "c", "d"],
+      "points": 2,
+      "feedback": {
+        "correct": "✅ Correct ! <header>, <footer> et <nav> sont sémantiques.",
+        "incorrect": "❌ <div> est générique, pas sémantique. Les autres sont sémantiques."
+      }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Qu'est-ce qu'une media query en CSS ?",
+      "choices": [
+        { "id": "a", "label": "Une requête vers un serveur multimédia" },
+        { "id": "b", "label": "Une règle CSS appliquée selon des conditions (écran, largeur, etc.)" },
+        { "id": "c", "label": "Un type de sélecteur CSS avancé" },
+        { "id": "d", "label": "Une animation CSS" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! Media queries permettent du responsive design.",
+        "incorrect": "❌ Non, une media query adapte le CSS selon le périphérique/écran."
+      }
+    },
+    {
+      "id": "q5",
+      "type": "boolean",
+      "prompt": "True or False : Grid peut gérer des layouts en deux dimensions (lignes et colonnes) ?",
+      "choices": [
+        { "id": "true", "label": "True" },
+        { "id": "false", "label": "False" }
+      ],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! Grid gère lignes et colonnes simultanément.",
+        "incorrect": "❌ False est incorrect. Grid est bidimensionnel."
+      }
+    }
+  ]
+}
