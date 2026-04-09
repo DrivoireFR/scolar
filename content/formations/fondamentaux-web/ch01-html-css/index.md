@@ -3,9 +3,10 @@ title: "Chapitre 1 — HTML & CSS Fondamentaux"
 slug: "ch01-html-css"
 order: 1
 parent: null
-children: ["ch01-tp", "ch01-projet"]
+children: []
 role: "fondamentaux-web"
 description: "Maîtriser les fondamentaux du web : structure HTML, mise en forme CSS, et responsive design"
+type: "theory"
 ---
 
 # Chapitre 1 — HTML & CSS Fondamentaux
@@ -17,15 +18,15 @@ description: "Maîtriser les fondamentaux du web : structure HTML, mise en forme
 - Structurer un document HTML5 sémantique
 - Styler avec CSS3 (propriétés essentielles, flexbox, grid)
 - Créer un design responsive (media queries, mobile-first)
-- Debugger avec les outils développeur
+- Déboguer avec les outils développeur
 
-## Contenu théorique
+---
 
-### 1. Structure HTML5
+## 1. Structure HTML5
 
 HTML signifie **HyperText Markup Language**. C'est le langage qui donne du sens et de la structure à un document web.
 
-#### Anatomie d'un document HTML
+### Anatomie d'un document HTML
 
 ```html
 <!DOCTYPE html>
@@ -59,7 +60,7 @@ HTML signifie **HyperText Markup Language**. C'est le langage qui donne du sens 
 - `<body>` : contenu visible
 - **Sémantique** : utiliser `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>` plutôt que des `<div>` génériques
 
-#### Éléments sémantiques courants
+### Éléments sémantiques courants
 
 | Élément | Sens |
 |---------|------|
@@ -73,11 +74,11 @@ HTML signifie **HyperText Markup Language**. C'est le langage qui donne du sens 
 
 ---
 
-### 2. CSS : mise en forme
+## 2. CSS : mise en forme
 
 CSS signifie **Cascading Style Sheets**. Il permet de contrôler l'apparence (couleurs, espacements, layouts) sans modifier la structure HTML.
 
-#### Sélecteurs de base
+### Sélecteurs de base
 
 ```css
 /* Sélecteur d'élément */
@@ -96,7 +97,7 @@ h1, h2, h3 { font-family: sans-serif; }
 nav a { text-decoration: none; }
 ```
 
-#### Propriétés essentielles
+### Propriétés essentielles
 
 **Texte et couleurs :**
 ```css
@@ -116,7 +117,7 @@ border: 1px solid #ccc;   /* Bordure */
 
 ---
 
-### 3. Flexbox : layouts modernes
+## 3. Flexbox : layouts modernes
 
 **Flexbox** est un système de mise en page en une dimension (lignes ou colonnes) qui simplifie l'alignement et la distribution d'espace.
 
@@ -143,20 +144,19 @@ border: 1px solid #ccc;   /* Bordure */
 
 ---
 
-### 4. CSS Grid : layouts bidimensionnels
+## 4. CSS Grid : layouts bidimensionnels
 
 **Grid** est un système de mise en page en deux dimensions (lignes ET colonnes).
 
 ```css
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;  /* 3 colonnes : 1, 2, 1 parts égales */
-  grid-template-rows: auto 1fr auto;   /* En-tête, contenu flexible, pied */
+  grid-template-columns: 1fr 2fr 1fr;  /* 3 colonnes */
+  grid-template-rows: auto 1fr auto;   /* En-tête, contenu, pied */
   gap: 20px;                           /* Espacement */
 }
 
 .grid-item {
-  /* Peut occuper plusieurs cellules */
   grid-column: 1 / 3;  /* De colonne 1 à 3 */
   grid-row: 1 / 2;     /* Ligne 1 */
 }
@@ -164,17 +164,17 @@ border: 1px solid #ccc;   /* Bordure */
 
 ---
 
-### 5. Responsive Design
+## 5. Responsive Design
 
 Un site **responsive** s'adapte à tous les écrans (mobile, tablet, desktop).
 
-#### Viewport meta tag (obligatoire)
+### Viewport meta tag (obligatoire)
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-#### Media queries
+### Media queries
 
 ```css
 /* Mobile d'abord (< 600px) */
@@ -195,4 +195,10 @@ body { font-size: 14px; }
 
 ## Validation de la théorie
 
-Avant de passer à la pratique, valide ta compréhension en répondant à ce **mini-quizz** :
+Avant de passer à la pratique, valide ta compréhension avec le **quizz de validation** :
+
+👉 [Quizz de validation](./quiz-validation.json)
+
+Une fois le quizz réussi (≥ 70%), **choisis une modalité pratique** pour mettre en pratique :
+
+👉 [Voir les modalités disponibles](./modalites.md)

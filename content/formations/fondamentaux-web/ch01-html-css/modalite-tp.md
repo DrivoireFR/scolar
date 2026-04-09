@@ -1,21 +1,18 @@
 ---
-title: "Chapitre 1-TP — HTML & CSS (Voie intensive)"
-slug: "ch01-tp"
-order: 1.1
+title: "Modalité A — TP Intensif (HTML & CSS)"
+slug: "ch01-modalite-tp"
 parent: "ch01-html-css"
-children: []
-role: "fondamentaux-web"
-description: "3 travaux pratiques courts et denses pour maîtriser rapidement HTML & CSS"
+type: "modality"
 modalityType: "tp"
+duration: "4-6 heures"
+difficulty: "beginner"
 projectReference:
   repo: "https://github.com/example/fondamentaux-web-projects"
   branch_start: "ch01-tp-start"
   branch_end: "ch01-tp-end"
-duration: "4-6 heures"
-difficulty: "beginner"
 ---
 
-# Chapitre 1-TP — Voie intensive (HTML & CSS)
+# Modalité A — TP Intensif (HTML & CSS)
 
 ## Contexte
 
@@ -27,7 +24,8 @@ Chaque TP se complète en **1-2 heures** et compile une compétence spécifique 
 - **TP 3** : Responsive design avec media queries
 
 **Durée totale** : 4-6 heures  
-**Modalité** : Travail individuel, code à soumettre
+**Modalité** : Travail individuel, code à soumettre  
+**Évaluation** : Checklist objective + scoring /10
 
 ---
 
@@ -53,7 +51,7 @@ Crée une **page portfolio personnel** avec :
 ```
 📁 tp1-portfolio/
   ├── index.html
-  ├── style.css
+  ├── style.css (peut être minimal)
   └── README.md (courte description)
 ```
 
@@ -65,10 +63,7 @@ Crée une **page portfolio personnel** avec :
 - [ ] Contenu réel (pas de Lorem Ipsum)
 - [ ] CSS appliqué (au minimum : couleurs, typographie)
 
-### Ressources
-
-- [W3C HTML Validator](https://validator.w3.org/)
-- [MDN HTML Sémantique](https://developer.mozilla.org/fr/docs/Glossary/Semantics)
+**Scoring : /3**
 
 ---
 
@@ -102,8 +97,10 @@ Mise à jour du TP 1 :
 - [ ] Navigation alignée horizontalement avec flexbox
 - [ ] Galerie flexible (2 colonnes en desktop)
 - [ ] Section "À propos" : photo + texte côte à côte
-- [ ] Pas de débordement de contenu (`overflow: hidden`)
+- [ ] Pas de débordement de contenu
 - [ ] Code CSS bien formaté et commenté
+
+**Scoring : /3**
 
 ---
 
@@ -142,27 +139,68 @@ Mise à jour finale :
 - [ ] Fonts et espacements adaptés par breakpoint
 - [ ] Testé sur DevTools (responsive mode)
 
+**Scoring : /4**
+
 ---
 
-## Évaluation finale du TP
+## Soumission
 
-Une fois les 3 TPs complétés, tu devras soumettre :
+### Fichiers à soumettre
 
-1. **Repo ou archive** avec tous les fichiers
-2. **Lien vers la démo en ligne** (ou instructions pour la lancer localement)
-3. **Checklist de validation** (critères ci-dessus cochés)
+1. **Repo ou archive** avec tous les fichiers (index.html, style.css, assets/)
+2. **Lien vers la démo en ligne** (GitHub Pages, Netlify, Vercel, etc.)
+3. **Checklist d'auto-évaluation** (voir ci-après)
 
-### Notation
+---
 
-- TP 1 : /3 (sémantique + validité)
-- TP 2 : /3 (flexbox + alignment)
-- TP 3 : /4 (responsive + media queries)
+## Auto-évaluation
+
+Avant de soumettre, complète cette checklist :
+
+### TP 1 — Structure HTML
+- [ ] HTML valide sur https://validator.w3.org/
+- [ ] `<header>` avec titre et navigation
+- [ ] `<main>` contenant le contenu principal
+- [ ] `<section>` pour regrouper les contenus thématiques
+- [ ] `<article>` pour chaque projet dans la galerie
+- [ ] `<footer>` avec liens ou info
+- [ ] Meta viewport présent
+- [ ] Contenu réel (pas de Lorem Ipsum)
+
+### TP 2 — Flexbox
+- [ ] Navigation avec `display: flex` + `justify-content`
+- [ ] Galerie de projets avec flexbox (2 colonnes visibles)
+- [ ] Section "À propos" : photo + texte alignés avec flexbox
+- [ ] Utilisation de `gap` pour espacer les éléments
+- [ ] Pas de débordement
+- [ ] Au moins 3 conteneurs avec `display: flex`
+- [ ] CSS bien formaté
+
+### TP 3 — Responsive
+- [ ] CSS mobile-first (de base, pas de breakpoint)
+- [ ] Media query `@media (min-width: 600px)` appliquée
+- [ ] Media query `@media (min-width: 1200px)` appliquée
+- [ ] Mobile (< 600px) : 1 colonne, lisible
+- [ ] Tablette (600-1200px) : 2 colonnes galerie
+- [ ] Desktop (>= 1200px) : 3 colonnes, layout optimisé
+- [ ] Fonts et espacements adaptés par breakpoint
+- [ ] Testé sur DevTools responsive mode
+
+---
+
+## Notation
+
+- TP 1 : /3
+- TP 2 : /3
+- TP 3 : /4
 - **Total : /10**
 
-**Seuil de réussite : 7/10**
+**Seuil réussite : 7/10** ✅
 
 ---
 
 ## Prochaine étape
 
-Une fois cette voie complétée, tu rejoins la suite du parcours : **Chapitre 2 — JavaScript Essentiel**.
+Une fois cette modalité complétée, tu accéderas à :
+
+👉 **Chapitre 2 — JavaScript Essentiel**

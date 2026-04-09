@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "title": "Validation théorie — HTML & CSS Fondamentaux",
-  "description": "Valide ta compréhension avant de passer à la pratique",
+  "title": "Quiz de validation — Théorie HTML & CSS",
+  "description": "Valide ta compréhension avant de choisir une modalité pratique",
   "shuffleQuestions": false,
   "passingScorePercent": 70,
   "questions": [
@@ -19,7 +19,7 @@
       "points": 1,
       "feedback": {
         "correct": "✅ Correct ! <main> est l'élément sémantique pour le contenu principal.",
-        "incorrect": "❌ Pas tout à fait. <main> est l'élément qui délimite le contenu principal."
+        "incorrect": "❌ Non, <main> est l'élément qui délimite le contenu principal."
       }
     },
     {

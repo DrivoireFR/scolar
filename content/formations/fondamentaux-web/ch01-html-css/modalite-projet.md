@@ -1,21 +1,18 @@
 ---
-title: "Chapitre 1-Projet — HTML & CSS (Voie progressive)"
-slug: "ch01-projet"
-order: 1.2
+title: "Modalité B — Projet Progressif (HTML & CSS)"
+slug: "ch01-modalite-projet"
 parent: "ch01-html-css"
-children: []
-role: "fondamentaux-web"
-description: "Un projet progressif et continu : construis un vrai site de A à Z"
+type: "modality"
 modalityType: "projet"
+duration: "8-12 heures"
+difficulty: "beginner"
 projectReference:
   repo: "https://github.com/example/fondamentaux-web-projects"
   branch_start: "ch01-projet-start"
   branch_end: "ch01-projet-end"
-duration: "8-12 heures"
-difficulty: "beginner"
 ---
 
-# Chapitre 1-Projet — Voie progressive (HTML & CSS)
+# Modalité B — Projet Progressif (HTML & CSS)
 
 ## Contexte
 
@@ -23,7 +20,8 @@ Tu as validé la théorie ? Excellent ! Ici, tu vas suivre une **voie plus progr
 
 **Durée totale** : 8-12 heures  
 **Modalité** : Projet fil rouge individuel, livré progressivement  
-**Sujet** : Création d'un blog personnel
+**Sujet** : Création d'un blog personnel  
+**Évaluation** : Checklist objective + scoring /10
 
 ---
 
@@ -66,9 +64,11 @@ Crée la **structure complète** d'un blog personnel en HTML pur :
 - [ ] Documents HTML valides (W3C)
 - [ ] Tous les éléments sémantiques : `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`
 - [ ] Navigation fonctionnelle entre pages
-- [ ] Contenu réel (pas de Lorem générique)
+- [ ] Contenu réel (pas de Lorem Ipsum générique)
 - [ ] Meta viewport et charset déclarés
 - [ ] Images avec alt text
+
+**Scoring : /3**
 
 ---
 
@@ -107,6 +107,8 @@ blog-personnel/
 - [ ] Navigation stylisée
 - [ ] Consultation lisible (contraste, line-height)
 
+**Scoring : /3.5**
+
 ---
 
 ### Étape 3 — Responsive Design (jour 3-4, ~3-4h)
@@ -135,45 +137,11 @@ blog-personnel/
 - [ ] Mobile-first CSS
 - [ ] 2+ media queries (`600px`, `1200px`)
 - [ ] Galerie : 1 col mobile, 2 col tablette, 3 col desktop
-- [ ] Navigation mobile : menu hamburger (CSS only, pas JS)
+- [ ] Navigation mobile : menu adapté (CSS only, pas JS)
 - [ ] Images responsive (`max-width: 100%`)
 - [ ] Testé sur DevTools (responsive mode)
 
----
-
-## Projet fil rouge : états du code
-
-### Branche `ch01-projet-start`
-
-```
-📁 blog-personnel/
-  ├── index.html       (structure brute, pas de CSS)
-  ├── article.html     (template vide)
-  └── assets/images/   (images placeholder)
-```
-
-**État entrée** : structure HTML uniquement, 0 CSS
-
----
-
-### Branche `ch01-projet-end`
-
-```
-📁 blog-personnel/
-  ├── index.html       (structure + CSS + responsive)
-  ├── article.html     (idem)
-  ├── about.html       (idem)
-  ├── contact.html     (idem)
-  ├── assets/
-  │   ├── css/
-  │   │   ├── reset.css
-  │   │   ├── variables.css
-  │   │   └── main.css (avec media queries)
-  │   └── images/
-  └── README.md        (documentation)
-```
-
-**État sortie** : blog complet, responsive, prêt pour JavaScript (Ch. 2)
+**Scoring : /3.5**
 
 ---
 
@@ -201,27 +169,91 @@ blog-personnel/
 
 ---
 
-## Évaluation finale du projet
+## Soumission
 
-Une fois les 3 étapes complétées :
+### Fichiers à soumettre
 
-1. **Push du repo** (ou archive ZIP)
-2. **Lien démo** (GitHub Pages, Netlify, etc.)
-3. **Checklist d'auto-évaluation** (ci-dessous)
+1. **Repo GitHub** (ou ZIP avec tous les fichiers)
+   ```
+   blog-personnel/
+     ├── index.html
+     ├── article.html
+     ├── about.html
+     ├── contact.html
+     ├── assets/
+     │   ├── css/
+     │   │   ├── reset.css
+     │   │   ├── variables.css
+     │   │   └── main.css
+     │   └── images/
+     └── README.md
+   ```
 
-### Notation
+2. **Lien démo** (GitHub Pages, Netlify, Vercel, etc.)
+3. **Checklist d'auto-évaluation** (voir ci-après)
+
+---
+
+## Auto-évaluation
+
+### Étape 1 — Structure HTML
+
+- [ ] `index.html` valide (W3C Validator)
+- [ ] `article.html` valide (W3C Validator)
+- [ ] `about.html` valide (W3C Validator)
+- [ ] `contact.html` valide (W3C Validator)
+- [ ] Tous les documents contiennent `<header>`, `<nav>`, `<main>`, `<footer>`
+- [ ] Articles structurés avec `<article>` et `<section>`
+- [ ] Meta viewport et charset présents
+- [ ] Toutes les images ont un `alt` text
+- [ ] Navigation fonctionne entre pages
+- [ ] Contenu réel (pas de Lorem Ipsum)
+
+### Étape 2 — Mise en forme CSS
+
+- [ ] Fichier `reset.css` ou normalisation CSS
+- [ ] Fichier `variables.css` avec palette de couleurs
+- [ ] Fichier `main.css`
+- [ ] Polices Google Fonts intégrées
+- [ ] Articles affichés en grille (Flexbox ou Grid)
+- [ ] 3 colonnes visible sur desktop
+- [ ] Cartes d'article avec `box-shadow` ou `border`
+- [ ] Hover effects sur les cartes
+- [ ] Navigation stylisée
+- [ ] Contraste de couleurs suffisant
+- [ ] Espacements réguliers
+
+### Étape 3 — Responsive Design
+
+- [ ] CSS mobile-first
+- [ ] Media query `@media (min-width: 600px)` déclarée et appliquée
+- [ ] Media query `@media (min-width: 1200px)` déclarée et appliquée
+- [ ] Mobile (< 600px) : 1 colonne articles
+- [ ] Tablette (600-1200px) : 2 colonnes articles
+- [ ] Desktop (>= 1200px) : 3 colonnes articles
+- [ ] Images responsive : `max-width: 100%`
+- [ ] Navigation adaptée (menu responsive)
+- [ ] Fonts et espacements ajustés par breakpoint
+- [ ] Testé sur Chrome DevTools responsive mode
+- [ ] Pas de débordement horizontal
+
+---
+
+## Notation
 
 - Étape 1 (HTML) : /3
-- Étape 2 (CSS & Styling) : /3.5
+- Étape 2 (CSS) : /3.5
 - Étape 3 (Responsive) : /3.5
 - **Total : /10**
 
-**Seuil réussite : 7/10**
+**Seuil réussite : 7/10** ✅
 
 ---
 
 ## Prochaine étape
 
-Une fois cette voie complétée, tu rejoins la suite : **Chapitre 2 — JavaScript Essentiel**.
+Une fois cette modalité complétée, tu accéderas à :
 
-Attention : le fil rouge du projet se poursuit ! Au Ch. 2, tu ajouteras **JavaScript** pour rendre le blog interactif (formulaire, commentaires, dark mode, etc.).
+👉 **Chapitre 2 — JavaScript Essentiel**
+
+Bonus : Ton blog devient la base pour ajouter JavaScript au Ch. 2 (formulaire interactif, dark mode, etc.) !
