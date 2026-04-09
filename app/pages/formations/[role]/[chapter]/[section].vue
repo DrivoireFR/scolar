@@ -5,11 +5,8 @@ const chapter = route.params.chapter as string
 const section = route.params.section as string
 
 // Chercher le fichier de la section
-// Le chemin complet est: /formations/{role}/{chapter}/{section}
-const contentPath = `formations/${role}/${chapter}/${section}`
-
 const { data: sectionData } = await useAsyncData(`section-${role}-${chapter}-${section}`, () =>
-  queryContent().where({ _path: new RegExp(`^/${contentPath}$`) }).findOne(),
+  queryContent(`formations`, role, chapter, section).findOne(),
 )
 
 if (!sectionData.value) {
