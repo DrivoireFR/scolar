@@ -5,10 +5,6 @@ parent: "ch01-html-css"
 type: "modalities"
 ---
 
-Bravo ! Tu as validé la théorie. Maintenant, **choisis une modalité pratique** pour mettre en œuvre tes connaissances.
-
-Deux chemins s'offrent à toi :
-
 <div class="modality-cards">
 
 <div class="modality-card">

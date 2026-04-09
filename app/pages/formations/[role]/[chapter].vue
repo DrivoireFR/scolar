@@ -88,13 +88,23 @@ const quizStorageKey = `quiz-${role}-${chapter}`
       <ContentRenderer :value="chapterData" class="body" />
     </main>
 
-    <section v-if="quizData" id="theory-quiz" class="chapter-quiz">
-      <h2 class="chapter-section-title">Quiz de validation</h2>
-      <QuizValidator :quiz-data="quizData" :storage-key="quizStorageKey" />
+    <section v-if="quizData" id="theory-quiz" class="chapter-validation">
+      <h2 class="chapter-section-title">Validation de la théorie</h2>
+      <p class="chapter-validation__lead">
+        Réponds aux questions ci-dessous pour obtenir ton score (seuil {{ quizData.passingScorePercent }}&nbsp;% pour valider).
+      </p>
+      <div class="chapter-quiz-panel">
+        <QuizValidator
+          variant="compact"
+          :quiz-data="quizData"
+          :storage-key="quizStorageKey"
+        />
+      </div>
     </section>
 
     <section v-if="modalitiesData" id="theory-modalities" class="chapter-modalities">
       <h2 class="chapter-section-title">Modalités pratiques</h2>
+      <p class="chapter-modalities__lead">Choisissez une modalité au choix pour mettre en pratique la théorie.</p>
       <ContentRenderer :value="modalitiesData" class="body" />
     </section>
 
@@ -162,16 +172,33 @@ const quizStorageKey = `quiz-${role}-${chapter}`
   color: #2d3748;
 }
 
-.chapter-quiz {
+.chapter-validation {
   margin-bottom: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #edf2f7;
+}
+
+.chapter-validation__lead {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.chapter-quiz-panel {
+  max-width: 100%;
 }
 
 .chapter-modalities {
   margin-bottom: 3rem;
   padding-top: 2rem;
   border-top: 1px solid #edf2f7;
+}
+
+.chapter-modalities__lead {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  font-size: 1rem;
 }
 
 .chapter-modalities :deep(.modality-cards) {

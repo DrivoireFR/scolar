@@ -190,14 +190,3 @@ body { font-size: 14px; }
   body { font-size: 18px; }
 }
 ```
-
----
-
-## Validation de la théorie
-
-Sur **cette même page**, en dessous du cours :
-
-1. Passe le **[quiz de validation](#theory-quiz)** (seuil ≥ 70 %).
-2. Puis choisis une **[modalité pratique](#theory-modalities)** pour appliquer la théorie.
-
-Les anciens liens directs (`/quiz-validation`, `/modalites`) redirigent automatiquement vers ces blocs.

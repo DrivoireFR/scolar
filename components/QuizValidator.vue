@@ -1,5 +1,5 @@
 <template>
-  <div class="quiz-validator">
+  <div class="quiz-validator" :class="{ 'quiz-validator--compact': variant === 'compact' }">
     <!-- Quiz not started -->
     <div v-if="!quizStarted" class="quiz-start">
       <div class="quiz-start__content">
@@ -190,10 +190,13 @@ interface QuizData {
 interface Props {
   quizData: QuizData
   storageKey?: string
+  /** Panneau à hauteur limitée (~demi-écran), score mis en avant */
+  variant?: 'default' | 'compact'
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  storageKey: 'quiz-progress'
+  storageKey: 'quiz-progress',
+  variant: 'default',
 })
 
 const quizStarted = ref(false)
@@ -364,6 +367,50 @@ loadProgress()
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-validator--compact {
+  max-height: min(50vh, 520px);
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-validator--compact .quiz-start {
+  padding: 1rem 0;
+}
+
+.quiz-validator--compact .quiz-progress .question-card {
+  margin: 1rem 0;
+}
+
+.quiz-validator--compact .quiz-results {
+  padding: 0.5rem 0;
+}
+
+.quiz-validator--compact .score-value {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.quiz-validator--compact .score-percent {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #4299e1;
+}
+
+.quiz-validator--compact .results-card h3 {
+  font-size: 1.5rem;
+}
+
+.quiz-validator--compact .results-emoji {
+  font-size: 2.5rem;
+}
+
+.quiz-validator--compact .results-details {
+  max-height: 12rem;
+  overflow-y: auto;
 }
 
 /* Start state */
