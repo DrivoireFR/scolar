@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  middleware: ['redirect-formation-sections'],
+})
+
 const route = useRoute()
 const role = route.params.role as string
 const chapter = route.params.chapter as string

@@ -195,10 +195,9 @@ body { font-size: 14px; }
 
 ## Validation de la théorie
 
-Avant de passer à la pratique, valide ta compréhension avec le **quizz de validation** :
+Sur **cette même page**, en dessous du cours :
 
-👉 [Quizz de validation](/formations/fondamentaux-web/ch01-html-css/quiz-validation)
+1. Passe le **[quiz de validation](#theory-quiz)** (seuil ≥ 70 %).
+2. Puis choisis une **[modalité pratique](#theory-modalities)** pour appliquer la théorie.
 
-Une fois le quizz réussi (≥ 70%), **choisis une modalité pratique** pour mettre en pratique :
-
-👉 [Voir les modalités disponibles](/formations/fondamentaux-web/ch01-html-css/modalites)
+Les anciens liens directs (`/quiz-validation`, `/modalites`) redirigent automatiquement vers ces blocs.

@@ -5,13 +5,13 @@ parent: "ch01-html-css"
 type: "modalities"
 ---
 
-# Modalités pratiques — HTML & CSS
-
 Bravo ! Tu as validé la théorie. Maintenant, **choisis une modalité pratique** pour mettre en œuvre tes connaissances.
 
 Deux chemins s'offrent à toi :
 
----
+<div class="modality-cards">
+
+<div class="modality-card">
 
 ## 📋 Modalité A : TP Intensif
 
@@ -36,7 +36,9 @@ Tous ces TPs utiliseront le **Projet Fil Rouge : Intégration d'une Maquette Web
 
 👉 **Commencer la modalité A** : [TP Intensif](/formations/fondamentaux-web/ch01-html-css/modalite-tp)
 
----
+</div>
+
+<div class="modality-card">
 
 ## 🎨 Modalité B : Projet Progressif
 
@@ -61,6 +63,10 @@ Tu vas progresser sur le **Projet Fil Rouge : Intégration d'une Maquette Web** 
 ❌ Plus long, demande plus de temps bloqué  
 
 👉 **Commencer la modalité B** : [Projet Progressif](/formations/fondamentaux-web/ch01-html-css/modalite-projet)
+
+</div>
+
+</div>
 
 ---
 
