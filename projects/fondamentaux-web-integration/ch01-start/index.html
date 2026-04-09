@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scolar Blog — Veille Technologique</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__logo">Scolar Blog</div>
+      <ul class="navbar__links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#categories">Catégories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Veille Technologique</h1>
+      <p class="hero__subtitle">Découvre les dernières tendances en développement web</p>
+      <a href="#articles" class="btn btn--primary">Lire les articles</a>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section id="articles" class="articles">
+    <div class="container">
+      <h2 class="articles__title">Derniers articles</h2>
+
+      <div class="articles__grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <img src="https://via.placeholder.com/300x200" alt="Vue 3" class="article-card__image">
+          <div class="article-card__content">
+            <span class="article-card__category">Frontend</span>
+            <h3 class="article-card__title">Vue 3 Composition API</h3>
+            <p class="article-card__excerpt">Maîtriser la nouvelle API de Vue 3 pour écrire du code plus réutilisable et maintenable.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">15 avril 2026</span>
+              <a href="#" class="article-card__link">Lire →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <img src="https://via.placeholder.com/300x200" alt="Tailwind CSS" class="article-card__image">
+          <div class="article-card__content">
+            <span class="article-card__category">CSS</span>
+            <h3 class="article-card__title">Tailwind CSS 4.0</h3>
+            <p class="article-card__excerpt">Les nouveautés de Tailwind CSS 4.0 et comment les utiliser dans tes projets.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">14 avril 2026</span>
+              <a href="#" class="article-card__link">Lire →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <img src="https://via.placeholder.com/300x200" alt="Node.js" class="article-card__image">
+          <div class="article-card__content">
+            <span class="article-card__category">Backend</span>
+            <h3 class="article-card__title">Node.js 22 Released</h3>
+            <p class="article-card__excerpt">Les améliorations de performance et les nouvelles features de Node.js 22.</p>
+            <div class="article-card__meta">
+              <span class="article-card__date">12 avril 2026</span>
+              <a href="#" class="article-card__link">Lire →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4>Scolar Blog</h4>
+          <p>Formations et veille en développement web</p>
+        </div>
+
+        <div class="footer__section">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Formations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__section">
+          <h4>Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Ton email" required>
+            <button type="submit" class="btn btn--primary">S'abonner</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Scolar. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

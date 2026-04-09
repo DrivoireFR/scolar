@@ -22,11 +22,14 @@ Deux chemins s'offrent à toi :
 - **TP 2** : Galerie — Flexbox et alignement (1-2h)
 - **TP 3** : Responsive — media queries et adaptation (1-2h)
 
+Tous ces TPs utiliseront le **Projet Fil Rouge : Intégration d'une Maquette Web** avec des fichiers de départ prêts à l'emploi.
+
 ### Durée totale
 4-6 heures
 
 ### Caractéristiques
 ✅ Exercices isolés et concis  
+✅ Fichiers de départ fournis (fil rouge)  
 ✅ Feedback immédiat après chaque TP  
 ✅ Branchement rapide vers le chapitre suivant  
 ❌ Moins de continuité narrative entre TPs  
@@ -44,12 +47,15 @@ Deux chemins s'offrent à toi :
 - **Étape 2** : Blog — mise en forme CSS et design (4h)
 - **Étape 3** : Blog — responsive et adaptabilité (3-4h)
 
+Tu vas progresser sur le **Projet Fil Rouge : Intégration d'une Maquette Web** avec des jalons de départ et de fin pour chaque étape.
+
 ### Durée totale
 8-12 heures
 
 ### Caractéristiques
 ✅ Un seul projet du début à la fin  
-✅ Construction progressive (HTMl → CSS → Responsive)  
+✅ Construction progressive (HTML → CSS → Responsive)  
+✅ Fil rouge guidé avec jalons clairs  
 ✅ Portfolio réel à mettre en ligne  
 ✅ Compréhension globale du workflow  
 ❌ Plus long, demande plus de temps bloqué  

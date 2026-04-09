@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scolar Blog - Veille technologique en développement web">
+  <title>Scolar Blog — Veille Technologique</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER avec navigation sticky -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__logo">Scolar</div>
+      <ul class="navbar__links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#categories">Catégories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Veille Technologique</h1>
+      <p class="hero__subtitle">Reste à jour avec les dernières tendances en développement web</p>
+      <a href="#articles" class="btn btn--primary btn--large">📚 Lire les articles</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ARTICLES SECTION -->
+    <section id="articles" class="articles">
+      <div class="container">
+        <h2 class="articles__title">Derniers articles</h2>
+
+        <div class="articles__grid">
+          <!-- Article Card 1 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=300&h=200&fit=crop"
+              alt="Vue.js 3"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">Frontend</span>
+              <h3 class="article-card__title">Vue 3 Composition API Avancée</h3>
+              <p class="article-card__excerpt">
+                Maîtrise la Composition API de Vue 3 avec des patterns avancés pour créer des composants réutilisables et performants.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">15 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 2 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1627398242454-45a570e80c11?w=300&h=200&fit=crop"
+              alt="Tailwind CSS"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">CSS</span>
+              <h3 class="article-card__title">Tailwind CSS 4.0 — Les Nouveautés</h3>
+              <p class="article-card__excerpt">
+                Découvre les améliorations de Tailwind CSS 4.0 et comment les utiliser pour accélérer ton workflow de design.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">14 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 3 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300&h=200&fit=crop"
+              alt="Node.js"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">Backend</span>
+              <h3 class="article-card__title">Node.js 22 — Performance Boost</h3>
+              <p class="article-card__excerpt">
+                Les dernières optimisations de performance et nouvelles features de Node.js 22 qui changent la donne.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">12 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 4 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=200&fit=crop"
+              alt="TypeScript"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">JavaScript</span>
+              <h3 class="article-card__title">TypeScript 5.5 — La Révolution</h3>
+              <p class="article-card__excerpt">
+                TypeScript 5.5 apporte des changements majeurs en type inference et performance. Tout ce que tu dois savoir.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">10 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 5 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=300&h=200&fit=crop"
+              alt="Web Performance"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">Performance</span>
+              <h3 class="article-card__title">Core Web Vitals 2026</h3>
+              <p class="article-card__excerpt">
+                Les métriques de performance web essentielles et comment optimiser ton site pour les Core Web Vitals.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">08 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article Card 6 -->
+          <article class="article-card">
+            <img
+              src="https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=300&h=200&fit=crop"
+              alt="React 19"
+              class="article-card__image"
+            >
+            <div class="article-card__content">
+              <span class="article-card__category">Frontend</span>
+              <h3 class="article-card__title">React 19 — Server Components</h3>
+              <p class="article-card__excerpt">
+                Les Server Components de React 19 changent la façon de construire des applications modernes et performantes.
+              </p>
+              <div class="article-card__meta">
+                <span class="article-card__date">05 avril 2026</span>
+                <a href="#" class="article-card__link">Lire →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter">
+      <div class="container">
+        <h2 class="newsletter__title">Reste Connecté</h2>
+        <p class="newsletter__subtitle">Reçois nos articles directement dans ta boîte mail</p>
+        <form class="newsletter__form">
+          <input
+            type="email"
+            placeholder="Ton adresse email"
+            class="newsletter__input"
+            required
+          >
+          <button type="submit" class="btn btn--primary">S'abonner</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Footer Section 1 -->
+        <div class="footer__section">
+          <h4 class="footer__title">Scolar</h4>
+          <p class="footer__description">Formations et veille technologique pour développeurs web.</p>
+        </div>
+
+        <!-- Footer Section 2 -->
+        <div class="footer__section">
+          <h4 class="footer__title">Navigation</h4>
+          <ul class="footer__list">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#categories">Catégories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Section 3 -->
+        <div class="footer__section">
+          <h4 class="footer__title">Ressources</h4>
+          <ul class="footer__list">
+            <li><a href="#">Formations</a></li>
+            <li><a href="#">Documentations</a></li>
+            <li><a href="#">Tutoriels</a></li>
+            <li><a href="#">Outils</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Section 4 -->
+        <div class="footer__section">
+          <h4 class="footer__title">Légal</h4>
+          <ul class="footer__list">
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Scolar. Tous droits réservés. | Conçu avec ❤️ par Dimitri</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

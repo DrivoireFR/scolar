@@ -27,23 +27,38 @@ Chaque TP se complète en **1-2 heures** et compile une compétence spécifique 
 **Modalité** : Travail individuel, code à soumettre  
 **Évaluation** : Checklist objective + scoring /10
 
+### 📂 Projet Fil Rouge — Point de Départ
+
+Pour cette modalité, tu vas utiliser le **Projet Fil Rouge : Intégration d'une Maquette Web**.
+
+Fichiers de départ : [`/projects/fondamentaux-web-integration/ch01-start/`](../../../../projects/fondamentaux-web-integration/)
+
+- `index.html` - Structure HTML de base (blog Scolar)
+- `styles.css` - Fichier CSS initial (vide ou minimal)
+- `figma-mockup.md` - Référence à la maquette à intégrer
+
+Après le chapitre, tu pourras comparer ta solution avec la référence : [`/projects/fondamentaux-web-integration/ch01-end/`](../../../../projects/fondamentaux-web-integration/)
+
 ---
 
 ## TP 1 — Structure et sémantique
 
 ### Énoncé
 
-Crée une **page portfolio personnel** avec :
-- En-tête avec titre et navigation
-- Section "À propos" avec image et texte
-- Galerie de projets (4 cartes minimum)
-- Pied de page avec liens
+À partir du **fichier de départ** (`/ch01-start/index.html`), tu vas **valider et améliorer la structure HTML** du blog Scolar :
+
+**Objets :**
+- En-tête avec logo et navigation
+- Section hero avec titre et CTA
+- Galerie d'articles (cartes)
+- Pied de page avec sections
 
 ### Contraintes
 
 - ✅ Utiliser les éléments sémantiques (`<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`)
 - ✅ Structurer avec `<section>` et `<article>` selon le contenu
 - ✅ Respecter le meta viewport pour la compatibilité mobile
+- ✅ Valider le HTML avec https://validator.w3.org/ (0 erreurs)
 - ❌ Pas de `<div>` sans sémantique (si possible)
 
 ### Livrables
@@ -71,17 +86,19 @@ Crée une **page portfolio personnel** avec :
 
 ### Énoncé
 
-À partir de ta portfolio du TP 1, **refactorise les layouts avec Flexbox** :
+En poursuivant sur le **fichier du TP 1**, tu vas **mettre en place les layouts Flexbox** pour le blog Scolar :
 
-- Navigation : layout horizontal avec flexbox, espacements réguliers
-- Galerie de projets : afficher les cartes en 2 colonnes (desktop), 1 colonne (mobile)
-- Section "À propos" : photo + texte côte à côte (flexbox)
+- **Navigation** : layout horizontal avec flexbox, logo à gauche, liens à droite
+- **Galerie d'articles** : flex-wrap pour adapter l'affichage
+- **Sections** : utiliser flexbox pour l'alignement du contenu
+- **Cartes articles** : flex-direction colonne pour image + texte
 
 ### Contraintes
 
-- ✅ Utiliser `display: flex` au minimum 3 fois
-- ✅ Expérimenter `justify-content`, `align-items`, `gap`
+- ✅ Utiliser `display: flex` au minimum 5 fois dans le CSS
+- ✅ Expérimenter `justify-content`, `align-items`, `flex-direction`, `gap`
 - ✅ Utiliser `flex: 1` ou `flex: 0 0 auto` consciemment
+- ✅ Pas de débordement de contenu
 - ❌ Ne pas utiliser `float` ou `position: absolute` pour les layouts
 
 ### Livrables
@@ -108,18 +125,19 @@ Mise à jour du TP 1 :
 
 ### Énoncé
 
-Finis le job en rendant ta portfolio **véritablement responsive** :
+Termine ta version du blog Scolar en le rendant **véritablement responsive** :
 
-- Sur mobile (< 600px) : 1 colonne partout, fonts réduites
-- Sur tablette (600px - 1200px) : 2 colonnes pour la galerie
-- Sur desktop (>= 1200px) : layout optimisé, fonts plus grandes
+- Sur mobile (< 768px) : 1 colonne pour les articles, navigation adaptée
+- Sur tablette (768px - 1024px) : 2 colonnes pour la galerie
+- Sur desktop (>= 1024px) : 3 colonnes, layout optimisé
 
 ### Contraintes
 
 - ✅ Mobile-first : CSS de base pour mobile, puis media queries pour les plus grandes tailles
 - ✅ Tester sur au moins 3 tailles d'écran (avec DevTools)
-- ✅ Utiliser au minimum 3 media queries
-- ❌ Pas de breakpoints arbitraires : utiliser 600px, 1200px (ou justifier)
+- ✅ Utiliser au minimum 2 media queries (`min-width: 768px`, `min-width: 1024px`)
+- ✅ Fonts et espacements adaptés par breakpoint
+- ❌ Pas de breakpoints arbitraires sans justification
 
 ### Livrables
 

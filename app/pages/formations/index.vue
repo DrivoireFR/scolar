@@ -10,12 +10,12 @@
       <!-- Roles List -->
       <section class="roles-section">
         <div class="roles-grid">
-          <!-- Fondamentaux Web -->
+          <!-- Fondamentaux et Intégration Web -->
           <NuxtLink to="/formations/fondamentaux-web" class="role-card">
             <div class="role-card__icon">🌐</div>
-            <h2>Fondamentaux Web</h2>
+            <h2>Fondamentaux et intégration Web</h2>
             <p class="role-card__description">
-              Maîtriser HTML, CSS et les bases du développement web moderne
+              Intégrer une maquette Figma en HTML/CSS et maîtriser les bases du web
             </p>
             <div class="role-card__meta">
               <span class="badge">4 chapitres</span>
