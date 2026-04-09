@@ -18,10 +18,14 @@ interface QuizData {
   questions: QuizQuestion[]
 }
 
-const quizModules = import.meta.glob<QuizData>('~/content/formations/**/quiz-validation.json', {
-  eager: true,
-  import: 'default',
-})
+// Chemin relatif au fichier : Vite ne résout pas toujours ~ dans import.meta.glob (objet vide → quiz invisible).
+const quizModules = import.meta.glob<QuizData>(
+  '../../../../content/formations/**/quiz-validation.json',
+  {
+    eager: true,
+    import: 'default',
+  },
+)
 
 const route = useRoute()
 const role = route.params.role as string
@@ -32,7 +36,10 @@ const modalitiesPath = `/formations/${role}/${chapter}/modalites`
 
 function findQuizData(): QuizData | null {
   const needle = `formations/${role}/${chapter}/quiz-validation.json`
-  const entry = Object.entries(quizModules).find(([path]) => path.includes(needle))
+  const entry = Object.entries(quizModules).find(([path]) => {
+    const normalized = path.replace(/\\/g, '/')
+    return normalized.includes(needle)
+  })
   return entry ? entry[1] : null
 }
 
