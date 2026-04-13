@@ -7,7 +7,7 @@ type: "modalities"
 
 <div class="modality-cards">
 
-<div class="modality-card">
+<a class="modality-card" href="/formations/fondamentaux-web/ch01-html-css/modalite-tp">
 
 ## 📋 Modalité A : TP Intensif
 
@@ -30,11 +30,11 @@ Tous ces TPs utiliseront le **Projet Fil Rouge : Intégration d'une Maquette Web
 ✅ Branchement rapide vers le chapitre suivant  
 ❌ Moins de continuité narrative entre TPs  
 
-👉 **Commencer la modalité A** : [TP Intensif](/formations/fondamentaux-web/ch01-html-css/modalite-tp)
+👉 *Clique sur cette carte pour ouvrir le parcours TP Intensif.*
 
-</div>
+</a>
 
-<div class="modality-card">
+<a class="modality-card" href="/formations/fondamentaux-web/ch01-html-css/modalite-projet">
 
 ## 🎨 Modalité B : Projet Progressif
 
@@ -58,9 +58,9 @@ Tu vas progresser sur le **Projet Fil Rouge : Intégration d'une Maquette Web** 
 ✅ Compréhension globale du workflow  
 ❌ Plus long, demande plus de temps bloqué  
 
-👉 **Commencer la modalité B** : [Projet Progressif](/formations/fondamentaux-web/ch01-html-css/modalite-projet)
+👉 *Clique sur cette carte pour ouvrir le parcours Projet progressif.*
 
-</div>
+</a>
 
 </div>
 
@@ -93,4 +93,4 @@ Seuil de réussite : **7/10**
 
 ## C'est parti ! 🚀
 
-Choisis ta modalité ci-dessus et clique sur le lien pour commencer.
+Choisis une carte ci-dessus pour commencer.

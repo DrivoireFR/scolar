@@ -215,17 +215,35 @@ const quizStorageKey = `quiz-${role}-${chapter}`
   margin-top: 1rem;
 }
 
-.chapter-modalities :deep(.modality-card) {
+.chapter-modalities :deep(a.modality-card) {
+  display: block;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 1.25rem 1.5rem;
   background: #f7fafc;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chapter-modalities :deep(a.modality-card:hover) {
+  border-color: #4299e1;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
+}
+
+.chapter-modalities :deep(a.modality-card:focus-visible) {
+  outline: 2px solid #4299e1;
+  outline-offset: 3px;
 }
 
 .chapter-modalities :deep(.modality-card h2) {
   margin-top: 0;
   font-size: 1.35rem;
+  color: #2d3748;
 }
 
 .chapter-footer {
@@ -283,12 +301,12 @@ const quizStorageKey = `quiz-${role}-${chapter}`
   margin-bottom: 0.5rem;
 }
 
-:deep(a) {
+:deep(a:not(.modality-card)) {
   color: #4299e1;
   text-decoration: none;
 }
 
-:deep(a:hover) {
+:deep(a:not(.modality-card):hover) {
   text-decoration: underline;
 }
 
