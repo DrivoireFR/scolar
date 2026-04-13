@@ -5,61 +5,42 @@ parent: "ch01-html-css"
 type: "modalities"
 ---
 
+<!-- Cartes en HTML pur dans <a> : le mélange <a> + markdown (##, listes) faisait sortir le contenu hors du lien (clic inactif). -->
+
 <div class="modality-cards">
 
 <a class="modality-card" href="/formations/fondamentaux-web/ch01-html-css/modalite-tp">
-
-## 📋 Modalité A : TP Intensif
-
-**Pour toi si :** Tu préfères des **exercices courts et ciblés**, progresser rapidement, voir les résultats vite.
-
-### Structure
-- **TP 1** : Portfolio — structure HTML + CSS basique (1-2h)
-- **TP 2** : Galerie — Flexbox et alignement (1-2h)
-- **TP 3** : Responsive — media queries et adaptation (1-2h)
-
-Tous ces TPs utiliseront le **Projet Fil Rouge : Intégration d'une Maquette Web** avec des fichiers de départ prêts à l'emploi.
-
-### Durée totale
-4-6 heures
-
-### Caractéristiques
-✅ Exercices isolés et concis  
-✅ Fichiers de départ fournis (fil rouge)  
-✅ Feedback immédiat après chaque TP  
-✅ Branchement rapide vers le chapitre suivant  
-❌ Moins de continuité narrative entre TPs  
-
-👉 *Clique sur cette carte pour ouvrir le parcours TP Intensif.*
-
+<h2>📋 Modalité A : TP Intensif</h2>
+<p><strong>Pour toi si :</strong> Tu préfères des <strong>exercices courts et ciblés</strong>, progresser rapidement, voir les résultats vite.</p>
+<h3>Structure</h3>
+<ul>
+<li><strong>TP 1</strong> : Portfolio — structure HTML + CSS basique (1-2h)</li>
+<li><strong>TP 2</strong> : Galerie — Flexbox et alignement (1-2h)</li>
+<li><strong>TP 3</strong> : Responsive — media queries et adaptation (1-2h)</li>
+</ul>
+<p>Tous ces TPs utiliseront le <strong>Projet Fil Rouge : Intégration d'une Maquette Web</strong> avec des fichiers de départ prêts à l'emploi.</p>
+<h3>Durée totale</h3>
+<p>4-6 heures</p>
+<h3>Caractéristiques</h3>
+<p>✅ Exercices isolés et concis<br>✅ Fichiers de départ fournis (fil rouge)<br>✅ Feedback immédiat après chaque TP<br>✅ Branchement rapide vers le chapitre suivant<br>❌ Moins de continuité narrative entre TPs</p>
+<p>👉 <em>Clique sur cette carte pour ouvrir le parcours TP Intensif.</em></p>
 </a>
 
 <a class="modality-card" href="/formations/fondamentaux-web/ch01-html-css/modalite-projet">
-
-## 🎨 Modalité B : Projet Progressif
-
-**Pour toi si :** Tu préfères **construire quelque chose de réel** du début à la fin, apprendre par continuité narrative, avoir un **portfolio** à montrer.
-
-### Structure
-- **Étape 1** : Blog — structure HTML complète (3h)
-- **Étape 2** : Blog — mise en forme CSS et design (4h)
-- **Étape 3** : Blog — responsive et adaptabilité (3-4h)
-
-Tu vas progresser sur le **Projet Fil Rouge : Intégration d'une Maquette Web** avec des jalons de départ et de fin pour chaque étape.
-
-### Durée totale
-8-12 heures
-
-### Caractéristiques
-✅ Un seul projet du début à la fin  
-✅ Construction progressive (HTML → CSS → Responsive)  
-✅ Fil rouge guidé avec jalons clairs  
-✅ Portfolio réel à mettre en ligne  
-✅ Compréhension globale du workflow  
-❌ Plus long, demande plus de temps bloqué  
-
-👉 *Clique sur cette carte pour ouvrir le parcours Projet progressif.*
-
+<h2>🎨 Modalité B : Projet Progressif</h2>
+<p><strong>Pour toi si :</strong> Tu préfères <strong>construire quelque chose de réel</strong> du début à la fin, apprendre par continuité narrative, avoir un <strong>portfolio</strong> à montrer.</p>
+<h3>Structure</h3>
+<ul>
+<li><strong>Étape 1</strong> : Blog — structure HTML complète (3h)</li>
+<li><strong>Étape 2</strong> : Blog — mise en forme CSS et design (4h)</li>
+<li><strong>Étape 3</strong> : Blog — responsive et adaptabilité (3-4h)</li>
+</ul>
+<p>Tu vas progresser sur le <strong>Projet Fil Rouge : Intégration d'une Maquette Web</strong> avec des jalons de départ et de fin pour chaque étape.</p>
+<h3>Durée totale</h3>
+<p>8-12 heures</p>
+<h3>Caractéristiques</h3>
+<p>✅ Un seul projet du début à la fin<br>✅ Construction progressive (HTML → CSS → Responsive)<br>✅ Fil rouge guidé avec jalons clairs<br>✅ Portfolio réel à mettre en ligne<br>✅ Compréhension globale du workflow<br>❌ Plus long, demande plus de temps bloqué</p>
+<p>👉 <em>Clique sur cette carte pour ouvrir le parcours Projet progressif.</em></p>
 </a>
 
 </div>
