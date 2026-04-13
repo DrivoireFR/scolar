@@ -70,6 +70,8 @@ const roleLabels: Record<string, string> = {
 const roleName = roleLabels[role] ?? role
 
 const quizStorageKey = `quiz-${role}-${chapter}`
+
+const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
 </script>
 
 <template>
@@ -112,7 +114,8 @@ const quizStorageKey = `quiz-${role}-${chapter}`
     <section v-if="modalitiesData" id="theory-modalities" class="chapter-modalities">
       <h2 class="chapter-section-title">Modalités pratiques</h2>
       <p class="chapter-modalities__lead">Choisissez une modalité au choix pour mettre en pratique la théorie.</p>
-      <ContentRenderer :value="modalitiesData" class="body" />
+      <ModalityCardDeck v-if="modalityCards.length" :cards="modalityCards" />
+      <ContentRenderer :value="modalitiesData" class="body modality-body-after-cards" />
     </section>
 
     <footer class="chapter-footer">
@@ -208,42 +211,10 @@ const quizStorageKey = `quiz-${role}-${chapter}`
   font-size: 1rem;
 }
 
-.chapter-modalities :deep(.modality-cards) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
+/* Cartes : composant ModalityCardDeck (lien overlay), styles dans le composant */
 
-.chapter-modalities :deep(a.modality-card) {
-  display: block;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  background: #f7fafc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.chapter-modalities :deep(a.modality-card:hover) {
-  border-color: #4299e1;
-  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
-}
-
-.chapter-modalities :deep(a.modality-card:focus-visible) {
-  outline: 2px solid #4299e1;
-  outline-offset: 3px;
-}
-
-.chapter-modalities :deep(.modality-card h2) {
-  margin-top: 0;
-  font-size: 1.35rem;
-  color: #2d3748;
+.chapter-modalities :deep(.modality-body-after-cards h2:first-child) {
+  margin-top: 2.5rem;
 }
 
 .chapter-footer {
@@ -301,12 +272,13 @@ const quizStorageKey = `quiz-${role}-${chapter}`
   margin-bottom: 0.5rem;
 }
 
-:deep(a:not(.modality-card)) {
+/* Liens dans le prose uniquement (pas le hitbox plein écran des cartes modalité) */
+:deep(a:not(.modality-card__hitbox)) {
   color: #4299e1;
   text-decoration: none;
 }
 
-:deep(a:not(.modality-card):hover) {
+:deep(a:not(.modality-card__hitbox):hover) {
   text-decoration: underline;
 }
 

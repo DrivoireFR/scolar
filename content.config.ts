@@ -1,6 +1,17 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
 import { z } from 'zod'
 
+const modalityCardSchema = z.object({
+  to: z.string(),
+  title: z.string(),
+  introHtml: z.string(),
+  structureItems: z.array(z.string()),
+  projectNoteHtml: z.string(),
+  duration: z.string(),
+  characteristicLines: z.array(z.string()),
+  closingHtml: z.string(),
+})
+
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
@@ -40,6 +51,7 @@ export default defineContentConfig({
         duration: z.string().optional(),
         difficulty: z.string().optional(),
         modalityType: z.string().optional(),
+        modalityCards: z.array(modalityCardSchema).optional(),
       }),
     }),
   },
