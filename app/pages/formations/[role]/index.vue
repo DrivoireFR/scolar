@@ -62,7 +62,7 @@
             </div>
 
             <NuxtLink
-              :to="`/formations/${role}/${chapter.slug}`"
+              :to="`/formations/${roleSlug}/${chapter.slug}`"
               class="chapter-item__link"
             >
               Commencer →
@@ -75,7 +75,11 @@
       <section class="cta-section">
         <h2>Prêt(e) à commencer ?</h2>
         <p>Commence par le premier chapitre et avance à ton rythme</p>
-        <NuxtLink :to="`/formations/${role}/${chapters[0].slug}`" class="btn btn--primary">
+        <NuxtLink
+          v-if="firstChapterSlug"
+          :to="`/formations/${roleSlug}/${firstChapterSlug}`"
+          class="btn btn--primary"
+        >
           Démarrer la formation
         </NuxtLink>
       </section>
@@ -86,68 +90,64 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import {
+  chapterSlugFromPath,
+  filterChapterHubTheory,
+  formatRoleSlugAsTitle,
+  sortTheoryByOrder,
+  type FormationTheoryDoc,
+} from '~/utils/formationsContent'
 
 const route = useRoute()
-const role = computed(() => route.params.role)
+const roleSlug = route.params.role as string
 
-// Mock data - remplacer par une vraie requête à Nuxt Content plus tard
-const roleData: Record<string, any> = {
-  'fondamentaux-web': {
-    name: 'Fondamentaux Web',
-    description: 'Maîtriser les bases du développement web : HTML, CSS et principes fondamentaux',
-    level: 'Débutant',
-    estimatedDuration: '20-30 heures',
-    chapters: [
-      {
-        slug: 'ch01-html-css',
-        title: 'Chapitre 1 — HTML & CSS Fondamentaux',
-        description: 'Apprendre la structure HTML sémantique, le styling CSS, flexbox et responsive design',
-        duration: '8-12h',
-        difficulty: 'Débutant',
-        completed: false
-      },
-      {
-        slug: 'ch02-javascript',
-        title: 'Chapitre 2 — JavaScript Essentiel',
-        description: 'Variables, fonctions, DOM manipulation et événements',
-        duration: '8-10h',
-        difficulty: 'Débutant',
-        completed: false
-      },
-      {
-        slug: 'ch03-frameworks',
-        title: 'Chapitre 3 — Frameworks & Nuxt.js',
-        description: 'Composants, réactivité, routing et SSR',
-        duration: '10-12h',
-        difficulty: 'Intermédiaire',
-        completed: false
-      },
-      {
-        slug: 'ch04-perf',
-        title: 'Chapitre 4 — Performance & Déploiement',
-        description: 'Optimisation, lighthouse et déploiement en production',
-        duration: '6-8h',
-        difficulty: 'Intermédiaire',
-        completed: false
-      }
-    ]
-  }
+const { data: theoryDocs } = await useAsyncData(`formations-theory-${roleSlug}`, () =>
+  queryCollection('formations')
+    .where('role', '=', roleSlug)
+    .where('type', '=', 'theory')
+    .all(),
+)
+
+if (!theoryDocs.value?.length) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Parcours introuvable : ${roleSlug}`,
+  })
 }
 
-const currentRole = computed(() => roleData[role.value as string])
-const roleName = computed(() => currentRole.value?.name || 'Rôle non trouvé')
-const roleDescription = computed(() => currentRole.value?.description || '')
-const level = computed(() => currentRole.value?.level || '')
-const estimatedDuration = computed(() => currentRole.value?.estimatedDuration || '')
-const chapters = computed(() => currentRole.value?.chapters || [])
-const completedCount = computed(() => chapters.value.filter((c: any) => c.completed).length)
+const sortedTheory = sortTheoryByOrder(
+  filterChapterHubTheory(theoryDocs.value as FormationTheoryDoc[]),
+)
+const pivotDoc = sortedTheory[0]!
+
+const roleName = computed(
+  () => pivotDoc.formationTitle ?? formatRoleSlugAsTitle(roleSlug),
+)
+const roleDescription = computed(() => pivotDoc.formationDescription ?? '')
+const level = computed(() => pivotDoc.level ?? '')
+const estimatedDuration = computed(() => pivotDoc.estimatedDuration ?? '')
+
+const chapters = computed(() =>
+  sortedTheory.map((doc) => ({
+    slug: chapterSlugFromPath(doc.path),
+    title: doc.title,
+    description: doc.description ?? '',
+    duration: doc.duration ?? '—',
+    difficulty: doc.difficulty ?? '—',
+    completed: false,
+  })),
+)
+
+const firstChapterSlug = computed(() => chapters.value[0]?.slug ?? '')
+
+const completedCount = computed(() => chapters.value.filter((c) => c.completed).length)
 const progressPercent = computed(() => {
   if (chapters.value.length === 0) return 0
   return Math.round((completedCount.value / chapters.value.length) * 100)
 })
 
 definePageMeta({
-  layout: 'default'
+  layout: 'default',
 })
 </script>
 

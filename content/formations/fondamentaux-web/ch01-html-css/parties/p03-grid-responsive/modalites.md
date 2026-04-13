@@ -1,10 +1,10 @@
 ---
 title: "Modalités pratiques — Chapitre 1 (HTML & CSS)"
-slug: "ch01-modalites"
+slug: "ch01-p03-modalites"
 parent: "ch01-html-css"
 type: "modalities"
 modalityCards:
-  - to: "/formations/fondamentaux-web/ch01-html-css/modalite-tp"
+  - to: "/formations/fondamentaux-web/ch01-html-css/parties/p03-grid-responsive/modalite-tp"
     title: "📋 Modalité A : TP Intensif"
     introHtml: "<strong>Pour toi si :</strong> Tu préfères des <strong>exercices courts et ciblés</strong>, progresser rapidement, voir les résultats vite."
     structureItems:
@@ -20,7 +20,7 @@ modalityCards:
       - "✅ Branchement rapide vers le chapitre suivant"
       - "❌ Moins de continuité narrative entre TPs"
     closingHtml: "<p>👉 <em>Clique sur cette carte pour ouvrir le parcours TP Intensif.</em></p>"
-  - to: "/formations/fondamentaux-web/ch01-html-css/modalite-projet"
+  - to: "/formations/fondamentaux-web/ch01-html-css/parties/p03-grid-responsive/modalite-projet"
     title: "🎨 Modalité B : Projet Progressif"
     introHtml: "<strong>Pour toi si :</strong> Tu préfères <strong>construire quelque chose de réel</strong> du début à la fin, apprendre par continuité narrative, avoir un <strong>portfolio</strong> à montrer."
     structureItems:
@@ -48,7 +48,7 @@ modalityCards:
 | **Objectif** | Maîtriser les concepts | Avoir un projet fini |
 | **Niveau d'autonomie** | Consignes précises | Plus d'exploration perso |
 
-**Les deux modalités couvrent les mêmes compétences !** Une fois l'une d'elle complétée, tu pourras accéder au **Chapitre 2 — JavaScript Essentiel**.
+**Les deux modalités couvrent les mêmes compétences !** Une fois l'une d'elle complétée, tu pourras accéder à l'**évaluation du chapitre**.
 
 ---
 
@@ -64,6 +64,6 @@ Seuil de réussite : **7/10**
 
 ---
 
-## C'est parti ! 🚀
+## C'est parti !
 
 Choisis une carte ci-dessus pour commencer.

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 3 (Grid & responsive)",
+  "description": "Valide les notions avant de choisir une modalité pratique",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Qu'est-ce qu'une media query en CSS ?",
+      "choices": [
+        { "id": "a", "label": "Une requête vers un serveur multimédia" },
+        { "id": "b", "label": "Une règle CSS appliquée selon des conditions (écran, largeur, etc.)" },
+        { "id": "c", "label": "Un type de sélecteur CSS avancé" },
+        { "id": "d", "label": "Une animation CSS" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! Media queries permettent du responsive design.",
+        "incorrect": "❌ Non, une media query adapte le CSS selon le périphérique/écran."
+      }
+    },
+    {
+      "id": "q5",
+      "type": "boolean",
+      "prompt": "True or False : Grid peut gérer des layouts en deux dimensions (lignes et colonnes) ?",
+      "choices": [
+        { "id": "true", "label": "True" },
+        { "id": "false", "label": "False" }
+      ],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": {
+        "correct": "✅ Correct ! Grid gère lignes et colonnes simultanément.",
+        "incorrect": "❌ False est incorrect. Grid est bidimensionnel."
+      }
+    }
+  ]
+}

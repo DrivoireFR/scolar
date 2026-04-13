@@ -25,7 +25,7 @@ Complète la checklist correspondant à **ta modalité choisie**.
 
 ### Si tu as suivi la Modalité A (TP Intensif)
 
-Voir la checklist dans : [TP Intensif → Auto-évaluation](./modalite-tp.md#auto-évaluation)
+Voir la checklist dans : [TP Intensif → Auto-évaluation](./parties/p03-grid-responsive/modalite-tp.md#auto-évaluation)
 
 **Scoring récapitulatif :**
 - TP 1 Structure : ___ / 3
@@ -35,7 +35,7 @@ Voir la checklist dans : [TP Intensif → Auto-évaluation](./modalite-tp.md#aut
 
 ### Si tu as suivi la Modalité B (Projet Progressif)
 
-Voir la checklist dans : [Projet Progressif → Auto-évaluation](./modalite-projet.md#auto-évaluation)
+Voir la checklist dans : [Projet Progressif → Auto-évaluation](./parties/p03-grid-responsive/modalite-projet.md#auto-évaluation)
 
 **Scoring récapitulatif :**
 - Étape 1 HTML : ___ / 3

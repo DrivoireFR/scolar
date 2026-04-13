@@ -7,65 +7,29 @@
         <p class="subtitle">Parcours de formation complets en développement web</p>
       </section>
 
-      <!-- Roles List -->
+      <!-- Roles List (parcours dérivés des chapitres type theory dans le contenu) -->
       <section class="roles-section">
-        <div class="roles-grid">
-          <!-- Fondamentaux et Intégration Web -->
-          <NuxtLink to="/formations/fondamentaux-web" class="role-card">
-            <div class="role-card__icon">🌐</div>
-            <h2>Fondamentaux et intégration Web</h2>
-            <p class="role-card__description">
-              Intégrer une maquette Figma en HTML/CSS et maîtriser les bases du web
-            </p>
+        <div v-if="parcoursList.length" class="roles-grid">
+          <NuxtLink
+            v-for="p in parcoursList"
+            :key="p.roleSlug"
+            :to="`/formations/${p.roleSlug}`"
+            class="role-card"
+          >
+            <div class="role-card__icon">{{ p.icon }}</div>
+            <h2>{{ p.title }}</h2>
+            <p class="role-card__description">{{ p.description }}</p>
             <div class="role-card__meta">
-              <span class="badge">4 chapitres</span>
-              <span class="badge">Débutant</span>
+              <span class="badge">{{ p.chapterCount }} chapitre{{ p.chapterCount > 1 ? 's' : '' }}</span>
+              <span v-if="p.level" class="badge">{{ p.level }}</span>
             </div>
             <div class="role-card__arrow">→</div>
           </NuxtLink>
-
-          <!-- Front-end (à venir) -->
-          <div class="role-card role-card--disabled">
-            <div class="role-card__icon">⚛️</div>
-            <h2>Front-end Developer</h2>
-            <p class="role-card__description">
-              React, Vue, Nuxt et frameworks modernes
-            </p>
-            <div class="role-card__meta">
-              <span class="badge">4 chapitres</span>
-              <span class="badge">Intermédiaire</span>
-              <span class="badge badge--soon">À venir</span>
-            </div>
-          </div>
-
-          <!-- Back-end (à venir) -->
-          <div class="role-card role-card--disabled">
-            <div class="role-card__icon">🔧</div>
-            <h2>Back-end Developer</h2>
-            <p class="role-card__description">
-              Node.js, Express, bases de données et APIs
-            </p>
-            <div class="role-card__meta">
-              <span class="badge">4 chapitres</span>
-              <span class="badge">Intermédiaire</span>
-              <span class="badge badge--soon">À venir</span>
-            </div>
-          </div>
-
-          <!-- DevOps (à venir) -->
-          <div class="role-card role-card--disabled">
-            <div class="role-card__icon">🚀</div>
-            <h2>DevOps Engineer</h2>
-            <p class="role-card__description">
-              Docker, Kubernetes, CI/CD et infrastructure
-            </p>
-            <div class="role-card__meta">
-              <span class="badge">4 chapitres</span>
-              <span class="badge">Avancé</span>
-              <span class="badge badge--soon">À venir</span>
-            </div>
-          </div>
         </div>
+        <p v-else class="roles-empty">
+          Aucun parcours pour l’instant. Ajoute des chapitres (<code>type: theory</code>) dans
+          <code>content/formations/</code>.
+        </p>
       </section>
 
       <!-- Info Section -->
@@ -94,8 +58,46 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import {
+  filterChapterHubTheory,
+  formatRoleSlugAsTitle,
+  sortTheoryByOrder,
+  type FormationTheoryDoc,
+} from '~/utils/formationsContent'
+
 definePageMeta({
-  layout: 'default'
+  layout: 'default',
+})
+
+const { data: theoryDocs } = await useAsyncData('formations-all-theory', () =>
+  queryCollection('formations').where('type', '=', 'theory').all(),
+)
+
+const parcoursList = computed(() => {
+  const docs = filterChapterHubTheory((theoryDocs.value ?? []) as FormationTheoryDoc[])
+  const byRole = new Map<string, FormationTheoryDoc[]>()
+  for (const doc of docs) {
+    const r = doc.role
+    if (!r) continue
+    if (!byRole.has(r)) byRole.set(r, [])
+    byRole.get(r)!.push(doc)
+  }
+
+  return [...byRole.entries()]
+    .map(([roleSlug, roleDocs]) => {
+      const sorted = sortTheoryByOrder(roleDocs)
+      const pivot = sorted[0]
+      return {
+        roleSlug,
+        chapterCount: roleDocs.length,
+        title: pivot?.formationTitle ?? formatRoleSlugAsTitle(roleSlug),
+        description: pivot?.formationDescription ?? '',
+        level: pivot?.level ?? '',
+        icon: pivot?.formationIcon ?? '📚',
+      }
+    })
+    .sort((a, b) => a.title.localeCompare(b.title, 'fr'))
 })
 </script>
 
@@ -223,6 +225,22 @@ definePageMeta({
 
 .role-card:hover .role-card__arrow {
   transform: translateX(4px);
+}
+
+.roles-empty {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.roles-empty code {
+  font-size: 0.85em;
+  background: #edf2f7;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
 }
 
 /* Info Section */

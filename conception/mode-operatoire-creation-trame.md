@@ -20,7 +20,8 @@ Ce mode opératoire décrit **comment** produire et enchaîner les supports de f
 |----------|-------------|
 | **Un rôle à la fois** | On ne mélange pas l’élaboration détaillée de plusieurs rôles dans la même session de travail sans cadrage explicite. |
 | **Partir de l’existant** | Chaque cycle commence par la relecture du **référentiel**, des **chapitres déjà livrés** et de l’**état du projet fil rouge** (entrée du chapitre courant). |
-| **Chapitre = unité de validation** | Un « combo » chapitre = théorie + modalités pratiques retenues + évaluation ; le **brief** couvre l’ensemble avant rédaction. |
+| **Chapitre = unité de validation** | Un « combo » chapitre = théorie (éventuellement découpée en **Parties**) + modalités pratiques retenues + évaluation ; le **brief** couvre l’ensemble avant rédaction. |
+| **Parties = grain fin** | Sous `content/formations/<role>/<chapitre>/parties/<slug>/`, chaque **Partie** vise une théorie **d’environ 20 minutes max** pour alterner théorie et pratique ; quiz et bloc `modalites.md` sont au niveau de la Partie lorsque le chapitre est découpé ainsi. Les **modalités** (TP, projet) sont des fichiers feuilles sous la Partie concernée. |
 | **Validation avant rédaction** | Le formateur valide le **brief chapitre** ; seulement ensuite : rédaction des fichiers de contenu. |
 | **Pensé pour Nuxt Content** | Tout livrable doit être adressable en fichiers sous `content/` (ou équivalent), avec **liens navigables** entre documents et **données exploitables** par l’application (frontmatter, Markdown, JSON selon modalité). |
 
@@ -58,8 +59,8 @@ Ces artefacts peuvent être un seul fichier Markdown ou plusieurs ; aucun outil 
 
 | Élément | Rôle |
 |---------|------|
-| **Brief chapitre validé** | Synthèse approuvée par le formateur : objectifs pédagogiques, sommaire théorie, **modalités retenues (TP, quizz, …)** avec **données nécessaires** par modalité, format d’évaluation auto- ou semi-corrigeable, critères de réussite, **plan de liens Nuxt Content** (fichiers cibles et relations). |
-| **Plan de rédaction** | Ordre des sous-livrables : théorie → consignes TP → **données quizz (JSON)** si applicable → évaluation ; **chemins et références** entre fichiers. |
+| **Brief chapitre validé** | Synthèse approuvée par le formateur : objectifs pédagogiques, sommaire théorie (éventuellement **découpage en Parties** et durée indicative par Partie), **modalités retenues (TP, quizz, …)** avec **données nécessaires** par modalité, format d’évaluation auto- ou semi-corrigeable, critères de réussite, **plan de liens Nuxt Content** (fichiers cibles et relations). |
+| **Plan de rédaction** | Ordre des sous-livrables : théorie (par Partie si découpé) → consignes TP → **données quizz (JSON)** si applicable → évaluation ; **chemins et références** entre fichiers. |
 | **État projet après chapitre** | **Sortie technique** du chapitre : où doit en être le projet support pour le chapitre suivant (base à l’entrée de N+1). |
 | **Mise à jour du référentiel** | Chapitre passé en **livré** ; **prochaine entrée** (prochain chapitre ou fin de rôle) documentée. |
 
@@ -114,6 +115,16 @@ Un **chapitre** correspond à un **ensemble de documents** reliés dans `content
 - **slugs** et noms de fichiers stables et prévisibles ;
 - liens explicites entre fichiers (chemins relatifs, propriétés de navigation, ou conventions du module `@nuxt/content`) ;
 - à la **création** du chapitre, le **brief validé** inclut une **carte des liens** (qui pointe vers qui).
+
+#### 8.1.0 Parties (optionnel mais recommandé pour les longs chapitres)
+
+Pour limiter la fatigue cognitive et alterner théorie / pratique, un chapitre peut être découpé en **Parties** sous `content/formations/<role>/<chapitre>/parties/<part-slug>/` :
+
+- **`index.md` de Partie** : `type: part-theory`, `order`, `role`, `estimatedTheoryMinutes` (viser **≤ 20 minutes** de théorie lues ou équivalent) ;
+- **`quiz-validation.json`** et **`modalites.md`** au même niveau que cet index pour enchaîner quiz puis cartes de modalités sur la **même** page applicative ;
+- **Modalités** (TP, projet, etc.) : fichiers Markdown **sous la Partie** concernée ; l’**évaluation** de fin de chapitre reste en général à la racine du chapitre (`evaluation.md`).
+
+Les documents `part-theory` ne doivent **pas** apparaître comme entrées de la liste des chapitres du parcours (filtrage des chemins contenant `/parties/` côté application).
 
 #### 8.1.1 Gestion des chapitres parents et enfants
 

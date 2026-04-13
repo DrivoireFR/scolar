@@ -18,9 +18,8 @@ interface QuizData {
   questions: QuizQuestion[]
 }
 
-// Chemin relatif au fichier : Vite ne résout pas toujours ~ dans import.meta.glob (objet vide → quiz invisible).
 const quizModules = import.meta.glob<QuizData>(
-  '../../../../content/formations/**/quiz-validation.json',
+  '../../../../../content/formations/**/quiz-validation.json',
   {
     eager: true,
     import: 'default',
@@ -38,7 +37,7 @@ function findQuizData(): QuizData | null {
   const needle = `formations/${role}/${chapter}/quiz-validation.json`
   const entry = Object.entries(quizModules).find(([path]) => {
     const normalized = path.replace(/\\/g, '/')
-    return normalized.includes(needle)
+    return normalized.includes(needle) && !normalized.includes('/parties/')
   })
   return entry ? entry[1] : null
 }
@@ -51,6 +50,23 @@ const { data: modalitiesData } = await useAsyncData(`modalities-${role}-${chapte
   queryCollection('formations').path(modalitiesPath).first(),
 )
 
+const { data: partIndexes } = await useAsyncData(
+  `chapter-parts-${role}-${chapter}`,
+  async () => {
+    const all = await queryCollection('formations')
+      .where('path', 'LIKE', `/formations/${role}/${chapter}/parties/%`)
+      .all()
+    const theory = (all as { path?: string; type?: string; order?: number; title?: string }[]).filter(
+      (d) => {
+        if (d.type !== 'part-theory' || !d.path) return false
+        const segs = d.path.split('/').filter(Boolean)
+        return segs.length === 5 && segs[3] === 'parties'
+      },
+    )
+    return theory.sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+  },
+)
+
 if (!chapterData.value) {
   throw createError({
     statusCode: 404,
@@ -58,7 +74,11 @@ if (!chapterData.value) {
   })
 }
 
-const quizData = findQuizData()
+const hasParts = computed(() => (partIndexes.value?.length ?? 0) > 0)
+
+const quizDataChapter = findQuizData()
+
+const quizData = computed(() => (hasParts.value ? null : quizDataChapter))
 
 useSeoMeta({
   title: chapterData.value.title,
@@ -72,6 +92,11 @@ const roleName = roleLabels[role] ?? role
 const quizStorageKey = `quiz-${role}-${chapter}`
 
 const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
+
+const firstPartPath = computed(() => {
+  const p = partIndexes.value?.[0]?.path
+  return p && p.startsWith('/') ? p : null
+})
 </script>
 
 <template>
@@ -97,21 +122,28 @@ const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
       <ContentRenderer :value="chapterData" class="body" />
     </main>
 
+    <section v-if="hasParts" class="chapter-parts">
+      <h2 class="chapter-section-title">Parties du chapitre</h2>
+      <p class="chapter-parts__lead">Enchaîne les parties dans l’ordre : théorie courte, quiz, puis modalités pratiques.</p>
+      <ol class="chapter-parts__list">
+        <li v-for="p in partIndexes" :key="p.path">
+          <NuxtLink v-if="p.path" :to="p.path">{{ p.title }}</NuxtLink>
+        </li>
+      </ol>
+      <NuxtLink v-if="firstPartPath" :to="firstPartPath" class="btn btn--primary"> Commencer la première partie </NuxtLink>
+    </section>
+
     <section v-if="quizData" id="theory-quiz" class="chapter-validation">
       <h2 class="chapter-section-title">Validation de la théorie</h2>
       <p class="chapter-validation__lead">
         Réponds aux questions ci-dessous pour obtenir ton score (seuil {{ quizData.passingScorePercent }}&nbsp;% pour valider).
       </p>
       <div class="chapter-quiz-panel">
-        <QuizValidator
-          variant="compact"
-          :quiz-data="quizData"
-          :storage-key="quizStorageKey"
-        />
+        <QuizValidator variant="compact" :quiz-data="quizData" :storage-key="quizStorageKey" />
       </div>
     </section>
 
-    <section v-if="modalitiesData" id="theory-modalities" class="chapter-modalities">
+    <section v-if="modalitiesData && !hasParts" id="theory-modalities" class="chapter-modalities">
       <h2 class="chapter-section-title">Modalités pratiques</h2>
       <p class="chapter-modalities__lead">Choisissez une modalité au choix pour mettre en pratique la théorie.</p>
       <ModalityCardDeck v-if="modalityCards.length" :cards="modalityCards" />
@@ -176,6 +208,36 @@ const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
   line-height: 1.8;
 }
 
+.chapter-parts {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1px solid #edf2f7;
+}
+
+.chapter-parts__lead {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.chapter-parts__list {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.chapter-parts__list a {
+  color: #4299e1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.chapter-parts__list a:hover {
+  text-decoration: underline;
+}
+
 .chapter-section-title {
   margin: 0 0 1.25rem 0;
   font-size: 1.75rem;
@@ -211,8 +273,6 @@ const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
   font-size: 1rem;
 }
 
-/* Cartes : composant ModalityCardDeck (lien overlay), styles dans le composant */
-
 .chapter-modalities :deep(.modality-body-after-cards h2:first-child) {
   margin-top: 2.5rem;
 }
@@ -245,6 +305,15 @@ const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
   background: #e2e8f0;
 }
 
+.btn--primary {
+  background: #4299e1;
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #3182ce;
+}
+
 :deep(h2) {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -272,7 +341,6 @@ const modalityCards = computed(() => modalitiesData.value?.modalityCards ?? [])
   margin-bottom: 0.5rem;
 }
 
-/* Liens dans le prose uniquement (pas le hitbox plein écran des cartes modalité) */
 :deep(a:not(.modality-card__hitbox)) {
   color: #4299e1;
   text-decoration: none;

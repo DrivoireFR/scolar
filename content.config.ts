@@ -52,6 +52,16 @@ export default defineContentConfig({
         difficulty: z.string().optional(),
         modalityType: z.string().optional(),
         modalityCards: z.array(modalityCardSchema).optional(),
+        /** Méta parcours (typiquement sur le chapitre pivot, ex. order === 1) */
+        formationTitle: z.string().optional(),
+        formationDescription: z.string().optional(),
+        level: z.string().optional(),
+        estimatedDuration: z.string().optional(),
+        formationIcon: z.string().optional(),
+        /** Hub chapitre uniquement (liste des chapitres du parcours) */
+        chapterHub: z.boolean().optional(),
+        /** Partie : théorie sous `parties/<slug>/` */
+        estimatedTheoryMinutes: z.number().optional(),
       }),
     }),
   },

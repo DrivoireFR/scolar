@@ -1,31 +1,36 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: ['redirect-formation-sections'],
+  middleware: ['redirect-formation-modalites'],
 })
 
 const route = useRoute()
 const role = route.params.role as string
 const chapter = route.params.chapter as string
-const section = route.params.section as string
+const modalite = route.params.modalite as string
 
-const sectionPath = `/formations/${role}/${chapter}/${section}`
+/** Évite la collision de route : `/chapitre/parties` ne doit pas être une modalité. */
+if (modalite === 'parties') {
+  await navigateTo(`/formations/${role}/${chapter}`)
+}
 
-const { data: sectionData } = await useAsyncData(`section-${role}-${chapter}-${section}`, () =>
-  queryCollection('formations').path(sectionPath).first(),
+const modalitePath = `/formations/${role}/${chapter}/${modalite}`
+
+const { data: modaliteData } = await useAsyncData(
+  `modalite-${role}-${chapter}-${modalite}`,
+  () => queryCollection('formations').path(modalitePath).first(),
 )
 
-if (!sectionData.value) {
+if (!modaliteData.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: `Section introuvable : ${sectionPath}`
+    statusMessage: `Modalité introuvable : ${modalitePath}`,
   })
 }
 
 useSeoMeta({
-  title: sectionData.value.title,
+  title: modaliteData.value.title,
 })
 
-// Labels
 const roleLabels: Record<string, string> = {
   'fondamentaux-web': 'Fondamentaux et intégration Web',
 }
@@ -34,8 +39,7 @@ const roleName = roleLabels[role] ?? role
 </script>
 
 <template>
-  <div v-if="sectionData" class="section-page">
-    <!-- Breadcrumb -->
+  <div v-if="modaliteData" class="modalite-page">
     <nav class="breadcrumb">
       <NuxtLink to="/">Accueil</NuxtLink>
       <span> / </span>
@@ -45,24 +49,21 @@ const roleName = roleLabels[role] ?? role
       <span> / </span>
       <NuxtLink :to="`/formations/${role}/${chapter}`">Chapitre</NuxtLink>
       <span> / </span>
-      <span>{{ sectionData.title }}</span>
+      <span>{{ modaliteData.title }}</span>
     </nav>
 
-    <!-- Header -->
-    <header class="section-header">
-      <div class="section-header__content">
-        <h1>{{ sectionData.title }}</h1>
-        <p v-if="sectionData.description" class="section-description">{{ sectionData.description }}</p>
+    <header class="modalite-header">
+      <div class="modalite-header__content">
+        <h1>{{ modaliteData.title }}</h1>
+        <p v-if="modaliteData.description" class="modalite-description">{{ modaliteData.description }}</p>
       </div>
     </header>
 
-    <!-- Contenu -->
-    <main class="section-content">
-      <ContentRenderer :value="sectionData" class="body" />
+    <main class="modalite-content">
+      <ContentRenderer :value="modaliteData" class="body" />
     </main>
 
-    <!-- Navigation -->
-    <footer class="section-footer">
+    <footer class="modalite-footer">
       <NuxtLink :to="`/formations/${role}/${chapter}`" class="btn btn--secondary">
         ← Retour au chapitre
       </NuxtLink>
@@ -71,7 +72,7 @@ const roleName = roleLabels[role] ?? role
 </template>
 
 <style scoped>
-.section-page {
+.modalite-page {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
@@ -84,7 +85,7 @@ const roleName = roleLabels[role] ?? role
 }
 
 .breadcrumb a {
-  color: #4299E1;
+  color: #4299e1;
   text-decoration: none;
 }
 
@@ -96,33 +97,33 @@ const roleName = roleLabels[role] ?? role
   margin: 0 0.5rem;
 }
 
-.section-header {
-  background: linear-gradient(135deg, #667EEA 0%, #4299E1 100%);
+.modalite-header {
+  background: linear-gradient(135deg, #667eea 0%, #4299e1 100%);
   color: white;
   padding: 3rem 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
-.section-header__content h1 {
+.modalite-header__content h1 {
   margin: 0 0 1rem 0;
   font-size: 2.5rem;
 }
 
-.section-description {
+.modalite-description {
   font-size: 1.1rem;
   opacity: 0.95;
   margin: 0;
 }
 
-.section-content {
+.modalite-content {
   margin-bottom: 3rem;
   line-height: 1.8;
 }
 
-.section-footer {
+.modalite-footer {
   padding-top: 2rem;
-  border-top: 1px solid #EDF2F7;
+  border-top: 1px solid #edf2f7;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -140,15 +141,14 @@ const roleName = roleLabels[role] ?? role
 }
 
 .btn--secondary {
-  background: #EDF2F7;
-  color: #4299E1;
+  background: #edf2f7;
+  color: #4299e1;
 }
 
 .btn--secondary:hover {
-  background: #E2E8F0;
+  background: #e2e8f0;
 }
 
-/* Contenu Markdown */
 :deep(h2) {
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -163,10 +163,11 @@ const roleName = roleLabels[role] ?? role
 
 :deep(p) {
   margin-bottom: 1rem;
-  color: #2D3748;
+  color: #2d3748;
 }
 
-:deep(ul), :deep(ol) {
+:deep(ul),
+:deep(ol) {
   margin-bottom: 1rem;
   padding-left: 2rem;
 }
@@ -176,7 +177,7 @@ const roleName = roleLabels[role] ?? role
 }
 
 :deep(a) {
-  color: #4299E1;
+  color: #4299e1;
   text-decoration: none;
 }
 
@@ -185,17 +186,17 @@ const roleName = roleLabels[role] ?? role
 }
 
 :deep(code) {
-  background: #F7FAFC;
+  background: #f7fafc;
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-family: 'Monaco', 'Courier New', monospace;
   font-size: 0.9em;
-  color: #E53E3E;
+  color: #e53e3e;
 }
 
 :deep(pre) {
-  background: #2D3748;
-  color: #E2E8F0;
+  background: #2d3748;
+  color: #e2e8f0;
   padding: 1rem;
   border-radius: 6px;
   overflow-x: auto;
@@ -210,7 +211,7 @@ const roleName = roleLabels[role] ?? role
 }
 
 :deep(blockquote) {
-  border-left: 4px solid #4299E1;
+  border-left: 4px solid #4299e1;
   padding-left: 1rem;
   margin: 1.5rem 0;
   color: #666;
@@ -223,27 +224,28 @@ const roleName = roleLabels[role] ?? role
   margin: 1rem 0;
 }
 
-:deep(th), :deep(td) {
-  border: 1px solid #EDF2F7;
+:deep(th),
+:deep(td) {
+  border: 1px solid #edf2f7;
   padding: 0.75rem;
   text-align: left;
 }
 
 :deep(th) {
-  background: #F7FAFC;
+  background: #f7fafc;
   font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  .section-page {
+  .modalite-page {
     padding: 1rem;
   }
 
-  .section-header {
+  .modalite-header {
     padding: 2rem 1rem;
   }
 
-  .section-header__content h1 {
+  .modalite-header__content h1 {
     font-size: 1.75rem;
   }
 }
