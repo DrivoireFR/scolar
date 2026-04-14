@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 1 (Fondamentaux et document)",
+  "description": "Une question par notion de la partie",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "n1",
+      "type": "single",
+      "prompt": "À quoi sert principalement le HTML dans le front-end ?",
+      "choices": [
+        { "id": "a", "label": "Décrire la structure et le sens du contenu" },
+        { "id": "b", "label": "Définir uniquement les couleurs et polices" },
+        { "id": "c", "label": "Exécuter la logique métier côté serveur" },
+        { "id": "d", "label": "Remplacer le protocole HTTP" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": {
+        "correct": "Correct : le HTML structure et sémantise ; le CSS présente.",
+        "incorrect": "Le HTML structure le document ; le style relève du CSS."
+      }
+    },
+    {
+      "id": "n2",
+      "type": "single",
+      "prompt": "Dans l’échange Web classique, que fait principalement HTTP ?",
+      "choices": [
+        { "id": "a", "label": "Associer un nom de domaine à une adresse IP" },
+        { "id": "b", "label": "Permettre la communication requête/réponse entre client et serveur" },
+        { "id": "c", "label": "Compresser uniquement les images JPEG" },
+        { "id": "d", "label": "Traduire le HTML en binaire pour l’écran" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Oui : HTTP est le protocole de transfert entre navigateur et serveur.",
+        "incorrect": "L’association domaine ↔ IP relève surtout du DNS."
+      }
+    },
+    {
+      "id": "n3",
+      "type": "single",
+      "prompt": "Qu’est-ce que le DNS ?",
+      "choices": [
+        { "id": "a", "label": "Un format de feuille de style" },
+        { "id": "b", "label": "Le système qui résout les noms de domaine vers des adresses de serveur" },
+        { "id": "c", "label": "La balise racine d’un document HTML" },
+        { "id": "d", "label": "Un type de balise sémantique" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Exact : DNS = résolution de noms.",
+        "incorrect": "Le DNS ne décrit pas le style ni la racine HTML."
+      }
+    },
+    {
+      "id": "n4",
+      "type": "boolean",
+      "prompt": "L’hébergement (hosting) désigne typiquement le fait de stocker et servir les fichiers du site depuis un serveur accessible sur Internet.",
+      "choices": [
+        { "id": "true", "label": "Vrai" },
+        { "id": "false", "label": "Faux" }
+      ],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": {
+        "correct": "Oui : l’hébergeur expose tes fichiers au réseau.",
+        "incorrect": "C’est bien le rôle de l’hébergement."
+      }
+    },
+    {
+      "id": "n5",
+      "type": "single",
+      "prompt": "Quel est le rôle principal du navigateur pour une page web ?",
+      "choices": [
+        { "id": "a", "label": "Compiler uniquement du Java en bytecode" },
+        { "id": "b", "label": "Interpréter le HTML, appliquer le CSS et exécuter le JavaScript" },
+        { "id": "c", "label": "Enregistrer obligatoirement les noms de domaine" },
+        { "id": "d", "label": "Remplacer le besoin d’un serveur web" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "C’est le triptyque rendu côté client.",
+        "incorrect": "Le navigateur affiche et exécute le front, pas l’enregistrement DNS."
+      }
+    },
+    {
+      "id": "n6",
+      "type": "single",
+      "prompt": "Que déclare la première ligne `<!DOCTYPE html>` ?",
+      "choices": [
+        { "id": "a", "label": "Que le document est encodé en UTF-16 uniquement" },
+        { "id": "b", "label": "Le mode HTML5 du document" },
+        { "id": "c", "label": "Qu’il n’y a pas de balise `<body>`" },
+        { "id": "d", "label": "L’URL de la feuille CSS par défaut" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Oui : DOCTYPE html = HTML5.",
+        "incorrect": "DOCTYPE ne fixe ni l’encodage ni la CSS."
+      }
+    },
+    {
+      "id": "n6b",
+      "type": "single",
+      "prompt": "Pourquoi renseigner `lang` sur `<html>` (ex. `lang=\"fr\"`) ?",
+      "choices": [
+        { "id": "a", "label": "Pour indiquer la langue principale du document (accessibilité, SEO, rendu)" },
+        { "id": "b", "label": "Pour charger automatiquement une police Google Fonts" },
+        { "id": "c", "label": "Pour désactiver les liens hypertextes" },
+        { "id": "d", "label": "Pour forcer le mode quirks du navigateur" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": {
+        "correct": "Oui : lecteurs d’écran, moteurs et césure s’appuient sur `lang`.",
+        "incorrect": "`lang` décrit la langue du contenu, pas les polices."
+      }
+    },
+    {
+      "id": "n7",
+      "type": "single",
+      "prompt": "Où place-t-on les métadonnées comme `charset`, `viewport` et `title` ?",
+      "choices": [
+        { "id": "a", "label": "Dans `<body>` uniquement" },
+        { "id": "b", "label": "Dans `<head>`" },
+        { "id": "c", "label": "Après `</html>`" },
+        { "id": "d", "label": "Dans un commentaire uniquement" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Le `<head>` regroupe métadonnées et liens de ressources.",
+        "incorrect": "Le contenu visible est dans `<body>`."
+      }
+    },
+    {
+      "id": "n8",
+      "type": "single",
+      "prompt": "À quoi sert `<meta charset=\"UTF-8\">` ?",
+      "choices": [
+        { "id": "a", "label": "Déclarer l’encodage des caractères du document" },
+        { "id": "b", "label": "Définir la largeur minimale du layout Flexbox" },
+        { "id": "c", "label": "Bloquer le JavaScript" },
+        { "id": "d", "label": "Créer une liste à puces" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": {
+        "correct": "UTF-8 couvre la plupart des scripts et symboles courants.",
+        "incorrect": "charset concerne l’encodage du texte, pas le layout."
+      }
+    },
+    {
+      "id": "n9",
+      "type": "single",
+      "prompt": "Pourquoi inclure `<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">` ?",
+      "choices": [
+        { "id": "a", "label": "Pour désactiver le responsive" },
+        { "id": "b", "label": "Pour que la largeur logique suive l’appareil et poser les bases du rendu mobile" },
+        { "id": "c", "label": "Pour remplacer la balise `<title>`" },
+        { "id": "d", "label": "Pour valider automatiquement le HTML auprès du W3C" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Le viewport lie la page aux écrans mobiles ; le détail CSS vient au chapitre 2.",
+        "incorrect": "Sans viewport adapté, le rendu mobile est souvent dégradé."
+      }
+    },
+    {
+      "id": "n10",
+      "type": "single",
+      "prompt": "Où le contenu visible par l’utilisateur est-il placé par convention ?",
+      "choices": [
+        { "id": "a", "label": "Dans `<head>`" },
+        { "id": "b", "label": "Dans `<body>`" },
+        { "id": "c", "label": "Dans `<!DOCTYPE>`" },
+        { "id": "d", "label": "Dans `<meta>` uniquement" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Le `<body>` contient le document affiché.",
+        "incorrect": "Le `<head>` n’affiche pas le corps de page."
+      }
+    },
+    {
+      "id": "n11",
+      "type": "single",
+      "prompt": "Le `<title>` est important notamment pour…",
+      "choices": [
+        { "id": "a", "label": "L’onglet du navigateur et le titre affiché dans les résultats de recherche" },
+        { "id": "b", "label": "Remplacer l’attribut `alt` des images" },
+        { "id": "c", "label": "Déclarer la couleur de fond par défaut" },
+        { "id": "d", "label": "Importer un module ES sans script" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": {
+        "correct": "Titre de document = UX + SEO.",
+        "incorrect": "Le title ne remplace pas alt ni la couleur de fond."
+      }
+    },
+    {
+      "id": "n12",
+      "type": "single",
+      "prompt": "Quelle syntaxe crée un commentaire HTML ?",
+      "choices": [
+        { "id": "a", "label": "`// commentaire`" },
+        { "id": "b", "label": "`<!-- commentaire -->`" },
+        { "id": "c", "label": "`/* commentaire */`" },
+        { "id": "d", "label": "`# commentaire`" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Les commentaires HTML utilisent `<!-- -->`.",
+        "incorrect": "`//` et `/* */` sont plutôt C/JS/CSS."
+      }
+    },
+    {
+      "id": "n13",
+      "type": "boolean",
+      "prompt": "La convention moderne est d’écrire les noms de balises HTML en minuscules (`<p>` plutôt que `<P>`).",
+      "choices": [
+        { "id": "true", "label": "Vrai" },
+        { "id": "false", "label": "Faux" }
+      ],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": {
+        "correct": "Minuscules = lisibilité et cohérence avec la communauté.",
+        "incorrect": "Même si le parseur est souvent tolérant, on écrit en minuscules."
+      }
+    },
+    {
+      "id": "n14",
+      "type": "single",
+      "prompt": "Dans le flux HTML normal (texte dans un paragraphe), comment le navigateur traite-t-il plusieurs espaces ou sauts de ligne consécutifs ?",
+      "choices": [
+        { "id": "a", "label": "Il les affiche tous tels quels systématiquement" },
+        { "id": "b", "label": "Il les réduit en général à un seul espace" },
+        { "id": "c", "label": "Il supprime tout le texte après le premier espace" },
+        { "id": "d", "label": "Il crée une nouvelle page pour chaque saut de ligne" }
+      ],
+      "correctChoiceIds": ["b"],
+      "points": 1,
+      "feedback": {
+        "correct": "Le HTML « collapse » les espaces dans le flux ; `<pre>` est une exception.",
+        "incorrect": "Pense au comportement par défaut du texte dans `<p>`."
+      }
+    }
+  ]
+}

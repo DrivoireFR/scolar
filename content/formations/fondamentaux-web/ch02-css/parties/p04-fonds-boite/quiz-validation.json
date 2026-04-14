@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 4 (Fonds & boîte)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "`background-image` accepte notamment…",
+      "choices": [
+        { "id": "a", "label": "`url(...)` ou des fonctions de dégradé" },
+        { "id": "b", "label": "Uniquement une couleur nommée sans fonction" },
+        { "id": "c", "label": "Un sélecteur CSS" },
+        { "id": "d", "label": "Une balise HTML" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Images et gradients.", "incorrect": "background-color est séparé." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`linear-gradient()` sert à…",
+      "choices": [
+        { "id": "a", "label": "Créer un dégradé suivant une direction / axe" },
+        { "id": "b", "label": "Aligner des colonnes flex sans conteneur" },
+        { "id": "c", "label": "Importer une police" },
+        { "id": "d", "label": "Valider le HTML" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Dégradé linéaire.", "incorrect": "Ce n’est pas Flexbox." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Le **padding** correspond à…",
+      "choices": [
+        { "id": "a", "label": "L’espace entre le bord de la boîte et le contenu intérieur" },
+        { "id": "b", "label": "L’espace entre deux blocs voisins uniquement hors bordure" },
+        { "id": "c", "label": "La couleur du texte" },
+        { "id": "d", "label": "La largeur du viewport" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Intérieur de la boîte.", "incorrect": "Margin est à l’extérieur." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "La **margin** correspond à…",
+      "choices": [
+        { "id": "a", "label": "L’espace extérieur autour de la bordure" },
+        { "id": "b", "label": "L’espace entre le texte et sa bordure interne (comme padding)" },
+        { "id": "c", "label": "La taille de police" },
+        { "id": "d", "label": "Un pseudo-élément obligatoire" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Extérieur de la boîte.", "incorrect": "Padding est intérieur." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`border: 2px solid #333` définit…",
+      "choices": [
+        { "id": "a", "label": "Épaisseur, style et couleur de bordure en raccourci" },
+        { "id": "b", "label": "Uniquement le z-index" },
+        { "id": "c", "label": "La police du contenu" },
+        { "id": "d", "label": "Une grille CSS" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Shorthand border.", "incorrect": "Pas de lien avec z-index." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`box-shadow` permet de…",
+      "choices": [
+        { "id": "a", "label": "Ajouter une ombre portée autour de la boîte" },
+        { "id": "b", "label": "Supprimer la bordure sans valeur" },
+        { "id": "c", "label": "Changer le `display` en grid" },
+        { "id": "d", "label": "Déclarer une police système" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Ombre décorative ou focus ring.", "incorrect": "Ce n’est pas display." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Par rapport à `border`, `outline`…",
+      "choices": [
+        { "id": "a", "label": "Ne prend généralement pas de place dans le calcul de boîte (hors flux) et sert souvent au focus" },
+        { "id": "b", "label": "Remplace toujours le padding" },
+        { "id": "c", "label": "N’existe pas en CSS" },
+        { "id": "d", "label": "Crée une grille automatique" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Outline et focus visibles.", "incorrect": "Outline existe et est utile." }
+    },
+    {
+      "id": "q8",
+      "type": "boolean",
+      "prompt": "Les marges verticales de deux blocs adjacents peuvent fusionner (margin collapsing).",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Comportement classique du flux block.", "incorrect": "À anticiper en mise en page." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "`width` sur un bloc fixe typiquement…",
+      "choices": [
+        { "id": "a", "label": "La largeur de la boîte de contenu (selon box-sizing)" },
+        { "id": "b", "label": "La hauteur de ligne uniquement" },
+        { "id": "c", "label": "Le nombre de colonnes flex" },
+        { "id": "d", "label": "La profondeur z-index" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Voir box-sizing (partie 5).", "incorrect": "Ce n’est pas line-height." }
+    }
+  ]
+}

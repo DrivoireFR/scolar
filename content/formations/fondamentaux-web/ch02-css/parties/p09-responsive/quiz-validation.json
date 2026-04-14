@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 9 (Responsive)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Une approche **mobile-first** écrit d’abord les styles pour…",
+      "choices": [
+        { "id": "a", "label": "Le petit écran, puis ajoute des règles avec min-width" },
+        { "id": "b", "label": "Le desktop uniquement" },
+        { "id": "c", "label": "Les imprimantes" },
+        { "id": "d", "label": "Les écrans 4K seulement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Base étroite + breakpoints min.", "incorrect": "Desktop-first serait l’inverse." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`@media (min-width: 768px)` s’applique quand…",
+      "choices": [
+        { "id": "a", "label": "La largeur du viewport est au moins 768px" },
+        { "id": "b", "label": "La hauteur est inférieure à 768px" },
+        { "id": "c", "label": "Le device est tactile uniquement" },
+        { "id": "d", "label": "Le JavaScript est désactivé" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "min-width = seuil bas.", "incorrect": "Ce n’est pas la hauteur." }
+    },
+    {
+      "id": "q3",
+      "type": "boolean",
+      "prompt": "Sans meta viewport adaptée, le rendu mobile peut ne pas correspondre aux largeurs CSS attendues.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "D’où le rappel côté HTML.", "incorrect": "La meta viewport compte." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Les **container queries** permettent de réagir à…",
+      "choices": [
+        { "id": "a", "label": "La taille du conteneur du composant (souvent via container-type)" },
+        { "id": "b", "label": "La timezone du serveur" },
+        { "id": "c", "label": "La vitesse du CPU" },
+        { "id": "d", "label": "Uniquement la présence de flexbox" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "@container vs viewport.", "incorrect": "Ce n’est pas le CPU." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`clamp(1rem, 2vw + 1rem, 2rem)` sert à…",
+      "choices": [
+        { "id": "a", "label": "Obtenir une taille fluide bornée entre un min et un max" },
+        { "id": "b", "label": "Fixer une grille 3 colonnes" },
+        { "id": "c", "label": "Importer une police" },
+        { "id": "d", "label": "Désactiver les animations" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Typo fluide.", "incorrect": "clamp est une fonction de taille." }
+    }
+  ]
+}

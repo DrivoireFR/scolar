@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 6 (Formulaires)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quel attribut de `<form>` indique en général l’URL qui traitera la soumission ?",
+      "choices": [
+        { "id": "a", "label": "action" },
+        { "id": "b", "label": "src" },
+        { "id": "c", "label": "href" },
+        { "id": "d", "label": "rel" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "action = endpoint.", "incorrect": "href est pour les liens." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Pour associer un `<label>` à un champ, on utilise le plus souvent…",
+      "choices": [
+        { "id": "a", "label": "for sur le label et id sur le contrôle (valeurs identiques)" },
+        { "id": "b", "label": "name identique sans id" },
+        { "id": "c", "label": "alt sur le label" },
+        { "id": "d", "label": "scope=\"row\" sur le label" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Association explicite for/id.", "incorrect": "name ne remplace pas l’association label." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Quel `input` est adapté à une adresse e-mail avec validation basique ?",
+      "choices": [
+        { "id": "a", "label": "type=\"email\"" },
+        { "id": "b", "label": "type=\"text\" seul obligatoire" },
+        { "id": "c", "label": "type=\"checkbox\"" },
+        { "id": "d", "label": "type=\"file\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "email donne un clavier et des contrôles utiles.", "incorrect": "text est moins précis." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Pour un texte multiligne, on utilise…",
+      "choices": [
+        { "id": "a", "label": "<textarea>" },
+        { "id": "b", "label": "<input type=\"text\"> avec rows" },
+        { "id": "c", "label": "<select>" },
+        { "id": "d", "label": "<fieldset> seul" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "textarea = multiligne.", "incorrect": "input text est une ligne." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Une liste déroulante native se compose de…",
+      "choices": [
+        { "id": "a", "label": "<select> et des <option>" },
+        { "id": "b", "label": "<ul> et <li> uniquement" },
+        { "id": "c", "label": "<table> et <td>" },
+        { "id": "d", "label": "<video> et <track>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "select/option.", "incorrect": "ul n’est pas une liste déroulante native." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "Quel élément donne un titre accessible à un groupe de champs dans un `fieldset` ?",
+      "choices": [
+        { "id": "a", "label": "<legend>" },
+        { "id": "b", "label": "<caption>" },
+        { "id": "c", "label": "<title> dans le fieldset" },
+        { "id": "d", "label": "<h1> obligatoire dans chaque input" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "legend décrit le groupe.", "incorrect": "caption est pour tableaux." }
+    },
+    {
+      "id": "q7",
+      "type": "boolean",
+      "prompt": "`required` sur un champ active une validation native côté navigateur avant envoi.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Contrainte côté client (à dupliquer serveur).", "incorrect": "required fait partie de la contrainte HTML5." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "`pattern` sur un `input` permet de…",
+      "choices": [
+        { "id": "a", "label": "Fournir une expression régulière pour la validation native" },
+        { "id": "b", "label": "Définir la couleur de bordure CSS" },
+        { "id": "c", "label": "Charger un module ES" },
+        { "id": "d", "label": "Remplacer method=\"post\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Regex HTML5.", "incorrect": "Ce n’est pas du CSS." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "Pour l’upload de fichier, on utilise…",
+      "choices": [
+        { "id": "a", "label": "input type=\"file\"" },
+        { "id": "b", "label": "textarea type=\"file\"" },
+        { "id": "c", "label": "form enctype=\"text/plain\" sans input spécial" },
+        { "id": "d", "label": "link rel=\"upload\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "file input.", "incorrect": "Il faut le type file." }
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "prompt": "L’attribut `accept` sur un `input type=\"file\"`…",
+      "choices": [
+        { "id": "a", "label": "Indique des filtres d’extensions ou MIME pour l’UI (pas une sécurité serveur)" },
+        { "id": "b", "label": "Garantit que le serveur rejettera tout autre type sans code serveur" },
+        { "id": "c", "label": "Remplace l’attribut name" },
+        { "id": "d", "label": "Désactive l’upload" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Toujours valider côté serveur.", "incorrect": "Le client ne suffit pas." }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 1 CSS (Introduction & cascade)",
+  "description": "Une question par notion clé",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quel mode d’application du CSS est le plus maintenable pour un site complet ?",
+      "choices": [
+        { "id": "a", "label": "Feuille de style externe liée avec <link rel=\"stylesheet\">" },
+        { "id": "b", "label": "Uniquement des attributs style=\"\" sur chaque balise" },
+        { "id": "c", "label": "Un seul fichier JSON sans CSS" },
+        { "id": "d", "label": "Des commentaires HTML uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Externe = réutilisation et cache.", "incorrect": "Inline ne scale pas." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Une règle CSS se compose d’un…",
+      "choices": [
+        { "id": "a", "label": "Sélecteur puis un bloc { propriété: valeur; }" },
+        { "id": "b", "label": "DOCTYPE puis un script" },
+        { "id": "c", "label": "Attribut href seul" },
+        { "id": "d", "label": "Élément <rule> en HTML5" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Syntaxe sélecteur + déclarations.", "incorrect": "Pas de balise rule native." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "À spécificité égale, quelle règle l’emporte en général ?",
+      "choices": [
+        { "id": "a", "label": "La dernière déclarée dans l’ordre du code" },
+        { "id": "b", "label": "Toujours la première" },
+        { "id": "c", "label": "Celle avec le sélecteur le plus court en caractères" },
+        { "id": "d", "label": "Aucune : le navigateur choisit au hasard" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Ordre source compte à égalité.", "incorrect": "La cascade n’est pas aléatoire." }
+    },
+    {
+      "id": "q4",
+      "type": "boolean",
+      "prompt": "`!important` doit rester une exception rare pour éviter une guerre de spécificité ingérable.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "À réserver aux contournements justifiés.", "incorrect": "Abus = dette technique." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Un commentaire CSS commence par…",
+      "choices": [
+        { "id": "a", "label": "/*" },
+        { "id": "b", "label": "// sur une ligne obligatoirement" },
+        { "id": "c", "label": "<!--" },
+        { "id": "d", "label": "# en début de fichier seulement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Bloc /* */.", "incorrect": "// n’est pas le commentaire historique CSS." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`rem` est relatif à…",
+      "choices": [
+        { "id": "a", "label": "La taille de police de l’élément racine (html)" },
+        { "id": "b", "label": "La largeur du viewport uniquement" },
+        { "id": "c", "label": "La hauteur du body uniquement" },
+        { "id": "d", "label": "La densité de pixels de l’écran uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "racine = html.", "incorrect": "Ce n’est pas vw/vh." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "`em` pour `font-size` sur un élément est en général relatif à…",
+      "choices": [
+        { "id": "a", "label": "La font-size du parent" },
+        { "id": "b", "label": "Toujours la racine comme rem" },
+        { "id": "c", "label": "La largeur du contenu" },
+        { "id": "d", "label": "Un multiple fixe de 16px sans contexte" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "em dépend du contexte parent.", "incorrect": "rem est racine." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "`calc(100% - 2rem)` permet de…",
+      "choices": [
+        { "id": "a", "label": "Calculer une valeur CSS à partir d’expressions mixtes (% et longueurs)" },
+        { "id": "b", "label": "Compiler du JavaScript dans le CSS" },
+        { "id": "c", "label": "Remplacer les media queries" },
+        { "id": "d", "label": "Déclarer une police Google" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Fonction de calcul CSS.", "incorrect": "Pas de JS dans calc." }
+    }
+  ]
+}

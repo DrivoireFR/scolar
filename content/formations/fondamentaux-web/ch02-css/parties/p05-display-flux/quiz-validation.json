@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 5 (Display & flux)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Un élément `display: block`…",
+      "choices": [
+        { "id": "a", "label": "Occupe typiquement toute la largeur et commence sur une nouvelle ligne" },
+        { "id": "b", "label": "Se comporte comme un mot dans une phrase sans saut de ligne" },
+        { "id": "c", "label": "Est toujours invisible" },
+        { "id": "d", "label": "Ignore padding et margin" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Bloc = pile verticale.", "incorrect": "Inline est dans le texte." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Un élément `display: inline`…",
+      "choices": [
+        { "id": "a", "label": "Suit le flux du texte ; largeur/hauteur ignorées en général" },
+        { "id": "b", "label": "Force toujours un saut de page" },
+        { "id": "c", "label": "Crée une grille 12 colonnes" },
+        { "id": "d", "label": "Supprime le contenu du DOM" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Inline dans la ligne.", "incorrect": "Pas de grille implicite." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`inline-block` combine…",
+      "choices": [
+        { "id": "a", "label": "Placement en ligne avec possibilité de dimensionner la boîte" },
+        { "id": "b", "label": "Uniquement le comportement de table" },
+        { "id": "c", "label": "L’invisibilité et le flex" },
+        { "id": "d", "label": "Grid et float obligatoires" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Inline mais boîte.", "incorrect": "Ce n’est pas display:table." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`display: none`…",
+      "choices": [
+        { "id": "a", "label": "Retire l’élément du rendu et de l’espace occupé" },
+        { "id": "b", "label": "Rend l’élément invisible mais garde l’espace" },
+        { "id": "c", "label": "Met l’élément en position fixed" },
+        { "id": "d", "label": "Ajoute une bordure pointillée" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "None = pas de boîte affichée.", "incorrect": "visibility:hidden garde l’espace." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`visibility: hidden` diffère de `display: none` car…",
+      "choices": [
+        { "id": "a", "label": "La boîte garde généralement sa place dans la mise en page" },
+        { "id": "b", "label": "L’élément devient un lien cliquable forcé" },
+        { "id": "c", "label": "L’élément est retiré du DOM" },
+        { "id": "d", "label": "Le texte devient gras" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Espace réservé.", "incorrect": "Le nœud reste dans l’arbre." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "Avec `box-sizing: border-box`, la `width` inclut…",
+      "choices": [
+        { "id": "a", "label": "Padding et bordure dans la largeur définie" },
+        { "id": "b", "label": "Uniquement le contenu sans padding" },
+        { "id": "c", "label": "Les marges externes" },
+        { "id": "d", "label": "La hauteur du viewport uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "border-box classique.", "incorrect": "content-box serait contenu seul." }
+    },
+    {
+      "id": "q7",
+      "type": "boolean",
+      "prompt": "Le flux normal (normal flow) est la base avant d’utiliser flex ou grid sur un conteneur.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Flex/grid créent un nouveau contexte à l’intérieur.", "incorrect": "Le flux existe toujours en amont." }
+    }
+  ]
+}

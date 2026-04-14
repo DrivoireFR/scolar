@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 5 (Médias)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quel attribut d’`img` fournit une alternative textuelle pour l’accessibilité ?",
+      "choices": [
+        { "id": "a", "label": "alt" },
+        { "id": "b", "label": "src" },
+        { "id": "c", "label": "title seul sans alt" },
+        { "id": "d", "label": "href" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "alt décrit ou annule pour décoratif.", "incorrect": "src est l’URL de l’image." }
+    },
+    {
+      "id": "q2",
+      "type": "boolean",
+      "prompt": "Pour une image purement décorative, `alt=\"\"` peut être approprié.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Vide = ignorée par beaucoup d’AT.", "incorrect": "C’est la recommandation pour décoratif." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Quel couple associe un média à une légende visible ?",
+      "choices": [
+        { "id": "a", "label": "<figure> + <figcaption>" },
+        { "id": "b", "label": "<table> + <caption> pour toute image" },
+        { "id": "c", "label": "<div> + <span> obligatoire" },
+        { "id": "d", "label": "<audio> + <video> seuls" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Figure légende le média.", "incorrect": "caption est pour tableaux." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Pour afficher les contrôles utilisateur sur une balise `<video>`, on ajoute souvent…",
+      "choices": [
+        { "id": "a", "label": "controls" },
+        { "id": "b", "label": "autoplay sans muted (bonne pratique universelle)" },
+        { "id": "c", "label": "loop obligatoire" },
+        { "id": "d", "label": "href" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "controls = lecture accessible.", "incorrect": "autoplay non muté est souvent bloqué et peu accessible." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "À quoi sert `<source>` à l’intérieur de `<video>` ou `<audio>` ?",
+      "choices": [
+        { "id": "a", "label": "Proposer plusieurs fichiers / types MIME pour le navigateur" },
+        { "id": "b", "label": "Remplacer la balise img" },
+        { "id": "c", "label": "Déclarer uniquement le charset" },
+        { "id": "d", "label": "Créer une liste à puces" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Fallback de formats.", "incorrect": "Ce n’est pas une liste HTML." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "Pour une iframe, quel attribut est crucial pour l’accessibilité ?",
+      "choices": [
+        { "id": "a", "label": "title (description du contenu embarqué)" },
+        { "id": "b", "label": "charset sur iframe" },
+        { "id": "c", "label": "type=\"video/mp4\" obligatoire" },
+        { "id": "d", "label": "scope=\"col\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "title nomme le cadre pour les AT.", "incorrect": "Pas de scope sur iframe." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Quelle entité représente le caractère `<` en HTML ?",
+      "choices": [
+        { "id": "a", "label": "&lt;" },
+        { "id": "b", "label": "&gt;" },
+        { "id": "c", "label": "&amp; seul pour <" },
+        { "id": "d", "label": "&#32;" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "less-than entity.", "incorrect": "&gt; est pour >." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "`loading=\"lazy\"` sur une image sert surtout à…",
+      "choices": [
+        { "id": "a", "label": "Retarder le chargement hors écran pour améliorer la performance" },
+        { "id": "b", "label": "Désactiver l’image sur mobile" },
+        { "id": "c", "label": "Forcer le téléchargement synchrone" },
+        { "id": "d", "label": "Remplacer alt" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Lazy load = perf.", "incorrect": "Ça ne remplace pas alt." }
+    }
+  ]
+}

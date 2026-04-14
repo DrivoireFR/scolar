@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 10 (Texte & décoration)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "`line-height: 1.5` sans unité signifie…",
+      "choices": [
+        { "id": "a", "label": "1,5 fois la font-size de l’élément" },
+        { "id": "b", "label": "1,5 pixel toujours" },
+        { "id": "c", "label": "1,5 % du viewport" },
+        { "id": "d", "label": "Une erreur de syntaxe" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Facteur multiplicatif.", "incorrect": "Pas de px implicite." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`text-align: start` est préférable à `left` quand…",
+      "choices": [
+        { "id": "a", "label": "On veut respecter la direction d’écriture (LTR/RTL)" },
+        { "id": "b", "label": "On veut toujours centrer le texte" },
+        { "id": "c", "label": "On désactive les polices web" },
+        { "id": "d", "label": "On utilise uniquement print" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "start suit le sens logique.", "incorrect": "left est moins logique en RTL." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`text-decoration: underline`…",
+      "choices": [
+        { "id": "a", "label": "Ajoute une ligne sous le texte (soulignement)" },
+        { "id": "b", "label": "Change la famille de police" },
+        { "id": "c", "label": "Crée une grille" },
+        { "id": "d", "label": "Supprime les espaces" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Décoration de texte.", "incorrect": "Ce n’est pas font-family." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`letter-spacing` modifie…",
+      "choices": [
+        { "id": "a", "label": "L’espace entre les caractères" },
+        { "id": "b", "label": "La marge externe du bloc" },
+        { "id": "c", "label": "Le nombre de colonnes grid" },
+        { "id": "d", "label": "La couleur de fond" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Tracking.", "incorrect": "Ce n’est pas margin." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`text-transform: uppercase` peut avoir un impact accessibilité si…",
+      "choices": [
+        { "id": "a", "label": "On l’applique sans réfléchir au rendu lecteur d’écran / à la lisibilité" },
+        { "id": "b", "label": "On l’utilise sur des listes `ul` uniquement" },
+        { "id": "c", "label": "On combine avec display:flex" },
+        { "id": "d", "label": "Jamais, c’est toujours neutre" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Tester et privilégier le bon contenu source.", "incorrect": "Ce n’est pas toujours neutre." }
+    }
+  ]
+}

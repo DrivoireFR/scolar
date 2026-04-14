@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 3 (Listes, tableaux, citations)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quelle balise pour une liste à puces sans ordre imposé ?",
+      "choices": [
+        { "id": "a", "label": "<ul>" },
+        { "id": "b", "label": "<ol>" },
+        { "id": "c", "label": "<dl>" },
+        { "id": "d", "label": "<table>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "unordered list = ul", "incorrect": "ol = ordonnée." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Quelle balise pour une liste dont l’ordre des éléments a du sens ?",
+      "choices": [
+        { "id": "a", "label": "<ol>" },
+        { "id": "b", "label": "<ul>" },
+        { "id": "c", "label": "<blockquote>" },
+        { "id": "d", "label": "<nav>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "ordered list", "incorrect": "ul ne numérote pas par défaut." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Chaque entrée d’une liste `ul` ou `ol` est un élément…",
+      "choices": [
+        { "id": "a", "label": "<li>" },
+        { "id": "b", "label": "<dt>" },
+        { "id": "c", "label": "<td>" },
+        { "id": "d", "label": "<th>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "list item", "incorrect": "dt/dd sont pour les définitions." }
+    },
+    {
+      "id": "q4",
+      "type": "boolean",
+      "prompt": "Une liste peut être imbriquée en plaçant une `ul` ou `ol` à l’intérieur d’un `li`.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Imbrication valide et courante.", "incorrect": "C’est la structure correcte pour sous-listes." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Dans une liste de définitions, le terme est marqué par…",
+      "choices": [
+        { "id": "a", "label": "<dt>" },
+        { "id": "b", "label": "<dd>" },
+        { "id": "c", "label": "<li>" },
+        { "id": "d", "label": "<caption>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "definition term", "incorrect": "dd = description." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "La description / définition associée au terme dans un `dl` est…",
+      "choices": [
+        { "id": "a", "label": "<dd>" },
+        { "id": "b", "label": "<dt>" },
+        { "id": "c", "label": "<q>" },
+        { "id": "d", "label": "<abbr>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "definition description", "incorrect": "Ne confonds pas dt/dd." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Citation longue en bloc : plutôt…",
+      "choices": [
+        { "id": "a", "label": "<blockquote>" },
+        { "id": "b", "label": "<q>" },
+        { "id": "c", "label": "<cite>" },
+        { "id": "d", "label": "<pre>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Bloc de citation.", "incorrect": "q = courte citation en ligne." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "Citation courte en ligne sans bloc dédié : plutôt…",
+      "choices": [
+        { "id": "a", "label": "<q>" },
+        { "id": "b", "label": "<blockquote>" },
+        { "id": "c", "label": "<address>" },
+        { "id": "d", "label": "<table>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Citation inline.", "incorrect": "blockquote est pour un bloc." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "`<cite>` sert surtout à…",
+      "choices": [
+        { "id": "a", "label": "Marquer le titre d’une œuvre ou une référence de source" },
+        { "id": "b", "label": "Remplacer obligatoirement blockquote" },
+        { "id": "c", "label": "Créer une liste numérotée" },
+        { "id": "d", "label": "Définir une ligne de tableau" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Référence d’œuvre / source.", "incorrect": "Ce n’est pas une liste ni une ligne." }
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "prompt": "Pour une abréviation avec expansion au survol / accessibilité, on utilise…",
+      "choices": [
+        { "id": "a", "label": "<abbr title=\"...\">" },
+        { "id": "b", "label": "<q title=\"...\"> seul" },
+        { "id": "c", "label": "<li abbr>" },
+        { "id": "d", "label": "<td abbr>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "abbr + title", "incorrect": "q ne sert pas à ça." }
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "prompt": "`<address>` est prévu pour…",
+      "choices": [
+        { "id": "a", "label": "Les informations de contact liées à l’article ou au site" },
+        { "id": "b", "label": "Toute adresse postale du monde sans contexte" },
+        { "id": "c", "label": "Un tableau de données" },
+        { "id": "d", "label": "Un script JavaScript" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Contact, pas géolocalisation arbitraire.", "incorrect": "Usage sémantique limité." }
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "prompt": "Pour un en-tête de colonne dans un tableau simple, on utilise `<th>` avec souvent…",
+      "choices": [
+        { "id": "a", "label": "scope=\"col\"" },
+        { "id": "b", "label": "method=\"GET\"" },
+        { "id": "c", "label": "target=\"_blank\"" },
+        { "id": "d", "label": "charset=\"UTF-8\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "scope aide l’accessibilité.", "incorrect": "Les autres attributs ne vont pas sur th." }
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "prompt": "Quel élément donne un titre visible (recommandé) à un tableau ?",
+      "choices": [
+        { "id": "a", "label": "<caption>" },
+        { "id": "b", "label": "<title> dans le body" },
+        { "id": "c", "label": "<legend> hors formulaire" },
+        { "id": "d", "label": "<header> obligatoire dans chaque cellule" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "caption décrit le tableau.", "incorrect": "title est dans head pour la page." }
+    },
+    {
+      "id": "q14",
+      "type": "boolean",
+      "prompt": "Utiliser un tableau uniquement pour la mise en page générale de la page est une bonne pratique moderne.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["false"],
+      "points": 1,
+      "feedback": { "correct": "Layout = CSS ; tableaux = données.", "incorrect": "Évite les tableaux de mise en page." }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 12 (Images & filtres)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "`object-fit: cover` sur une image dans un cadre fixe…",
+      "choices": [
+        { "id": "a", "label": "Remplit le cadre en recadrant si nécessaire" },
+        { "id": "b", "label": "Garantit toujours l’image entière visible sans recadrage" },
+        { "id": "c", "label": "Désactive le chargement lazy" },
+        { "id": "d", "label": "Remplace l’attribut alt" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "cover = remplissage.", "incorrect": "contain montre tout l’image." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`object-fit: contain`…",
+      "choices": [
+        { "id": "a", "label": "Affiche l’image entière dans le cadre, avec possiblement des marges vides" },
+        { "id": "b", "label": "Étire sans respect du ratio" },
+        { "id": "c", "label": "Supprime l’image" },
+        { "id": "d", "label": "Force une grille CSS" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "contain = pas de crop.", "incorrect": "fill étirerait." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`filter: blur(2px)`…",
+      "choices": [
+        { "id": "a", "label": "Applique un flou visuel sur l’élément rendu" },
+        { "id": "b", "label": "Change uniquement la couleur du texte" },
+        { "id": "c", "label": "Crée une bordure pointillée" },
+        { "id": "d", "label": "Valide le HTML" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Filtre graphique.", "incorrect": "Pas de validation HTML." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`list-style: none` sur un `ul` sert souvent à…",
+      "choices": [
+        { "id": "a", "label": "Retirer les puces par défaut avant un design custom" },
+        { "id": "b", "label": "Transformer la liste en tableau" },
+        { "id": "c", "label": "Rendre la liste non sémantique" },
+        { "id": "d", "label": "Désactiver le flex sur les enfants" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Base pour nav / chips.", "incorrect": "La liste reste ul/li." }
+    }
+  ]
+}

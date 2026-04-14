@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 8 (Grid)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quelle valeur de `display` active CSS Grid sur un conteneur ?",
+      "choices": [
+        { "id": "a", "label": "grid (ou inline-grid)" },
+        { "id": "b", "label": "flex seulement" },
+        { "id": "c", "label": "table-row" },
+        { "id": "d", "label": "block-grid" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "display: grid.", "incorrect": "flex n’est pas grid." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`grid-template-columns` définit…",
+      "choices": [
+        { "id": "a", "label": "Les pistes de colonnes de la grille" },
+        { "id": "b", "label": "Uniquement la couleur de fond" },
+        { "id": "c", "label": "Le z-index global" },
+        { "id": "d", "label": "La police du document" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Colonnes = tracks.", "incorrect": "Pas typographie." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "L’unité `fr` en Grid représente…",
+      "choices": [
+        { "id": "a", "label": "Une fraction de l’espace libre disponible dans le conteneur" },
+        { "id": "b", "label": "Une unité fixe égale à 1px toujours" },
+        { "id": "c", "label": "La hauteur du viewport uniquement" },
+        { "id": "d", "label": "Un pourcentage du parent sans calcul" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Flexible fraction unit.", "incorrect": "Ce n’est pas 1px." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`gap` sur une grille…",
+      "choices": [
+        { "id": "a", "label": "Crée l’espace entre les cellules (rangs et colonnes)" },
+        { "id": "b", "label": "Supprime toutes les colonnes" },
+        { "id": "c", "label": "Remplace grid-template-rows obligatoirement" },
+        { "id": "d", "label": "Convertit la grille en flex" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Gouttière de grille.", "incorrect": "gap ne supprime pas les tracks." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`grid-column: span 2` sur un item…",
+      "choices": [
+        { "id": "a", "label": "Fait s’étendre l’item sur deux colonnes" },
+        { "id": "b", "label": "Réduit l’item à une colonne" },
+        { "id": "c", "label": "Désactive le gap" },
+        { "id": "d", "label": "Fixe la hauteur à 2px" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Span sur plusieurs pistes.", "incorrect": "Ce n’est pas une hauteur." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "Grid est surtout adapté à…",
+      "choices": [
+        { "id": "a", "label": "Des layouts bidimensionnels (lignes ET colonnes maîtrisées ensemble)" },
+        { "id": "b", "label": "Du texte courant dans un paragraphe uniquement" },
+        { "id": "c", "label": "Remplacer le HTML sémantique" },
+        { "id": "d", "label": "Désactiver le responsive" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "2D layout.", "incorrect": "Grid n’annule pas le responsive." }
+    }
+  ]
+}

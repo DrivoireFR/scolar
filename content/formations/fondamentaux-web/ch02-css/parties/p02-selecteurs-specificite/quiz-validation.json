@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 2 (Sélecteurs & spécificité)",
+  "description": "Une question par notion de la partie",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Comment cible-t-on tous les paragraphes en CSS ?",
+      "choices": [
+        { "id": "a", "label": "Avec le sélecteur d’élément `p`" },
+        { "id": "b", "label": "Avec `#p` systématiquement" },
+        { "id": "c", "label": "Avec `.html`" },
+        { "id": "d", "label": "Avec `::paragraph`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Sélecteur de type = nom de balise.", "incorrect": "Ce n’est pas un id." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Un sélecteur de classe s’écrit…",
+      "choices": [
+        { "id": "a", "label": "`.nom` (point + nom de classe)" },
+        { "id": "b", "label": "`#nom`" },
+        { "id": "c", "label": "`@nom`" },
+        { "id": "d", "label": "`%nom`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Classe = point.", "incorrect": "# est pour id." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Un sélecteur d’ID s’écrit…",
+      "choices": [
+        { "id": "a", "label": "`#identifiant`" },
+        { "id": "b", "label": "`.identifiant`" },
+        { "id": "c", "label": "`id(identifiant)`" },
+        { "id": "d", "label": "`*identifiant`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "ID = dièse.", "incorrect": "Point = classe." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Pour appliquer la même déclaration à `h1`, `h2` et `h3`, on utilise…",
+      "choices": [
+        { "id": "a", "label": "Le groupement : `h1, h2, h3 { ... }`" },
+        { "id": "b", "label": "Trois fichiers CSS obligatoires" },
+        { "id": "c", "label": "Un seul `h1` dans le HTML" },
+        { "id": "d", "label": "`h1 h2 h3` sans virgule" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Liste séparée par des virgules.", "incorrect": "Sans virgule ce serait un combinateur descendant." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`.card a` sélectionne…",
+      "choices": [
+        { "id": "a", "label": "Tout lien `a` descendant (à n’importe quelle profondeur) d’un `.card`" },
+        { "id": "b", "label": "Uniquement les `a` enfant direct de `.card`" },
+        { "id": "c", "label": "Les cartes dans un lien" },
+        { "id": "d", "label": "Rien : syntaxe invalide" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Combinateur descendant = espace.", "incorrect": "Enfant direct utiliserait `>`." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`.nav > li` signifie…",
+      "choices": [
+        { "id": "a", "label": "Un `li` enfant **direct** de `.nav`" },
+        { "id": "b", "label": "Un `li` n’importe où sous `.nav`" },
+        { "id": "c", "label": "Le voisin immédiat suivant" },
+        { "id": "d", "label": "Un attribut `li` sur nav" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": ">` = enfant direct.", "incorrect": "Espace = descendant quelconque." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "`h2 + p` cible…",
+      "choices": [
+        { "id": "a", "label": "Le premier `p` placé immédiatement après un `h2` (voisin direct)" },
+        { "id": "b", "label": "Tous les `p` après un `h2` dans le parent" },
+        { "id": "c", "label": "Le `h2` lui-même" },
+        { "id": "d", "label": "Un `p` imbriqué dans `h2`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Voisin adjacent `+`.", "incorrect": "`~` serait les voisins suivants." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "`h2 ~ p` cible…",
+      "choices": [
+        { "id": "a", "label": "Les `p` frères suivant un `h2` (même parent, après le h2)" },
+        { "id": "b", "label": "Uniquement le tout premier `p` après le `h2`" },
+        { "id": "c", "label": "Les `h2` avant un `p`" },
+        { "id": "d", "label": "Les enfants directs de `h2`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Général sibling combinator `~`.", "incorrect": "Ce n’est pas le combinateur `+`." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "Laquelle est une **pseudo-classe** ?",
+      "choices": [
+        { "id": "a", "label": ":hover" },
+        { "id": "b", "label": "::before" },
+        { "id": "c", "label": "::first-line" },
+        { "id": "d", "label": "::marker en tant que pseudo-élément uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Les pseudo-classes usuelles utilisent un seul `:` (ex. `:hover`).", "incorrect": "`::before` est un pseudo-élément." }
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "prompt": "Pour insérer un contenu décoratif généré avant un élément, on utilise souvent…",
+      "choices": [
+        { "id": "a", "label": "`::before` avec la propriété `content`" },
+        { "id": "b", "label": ":hover sans content" },
+        { "id": "c", "label": "`#before` en HTML" },
+        { "id": "d", "label": "Uniquement `<br>`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Pseudo-élément + content.", "incorrect": ":hover ne génère pas de boîte before." }
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "prompt": "`input[type=\"email\"]` est un exemple de…",
+      "choices": [
+        { "id": "a", "label": "Sélecteur d’attribut" },
+        { "id": "b", "label": "Combinateur enfant" },
+        { "id": "c", "label": "Pseudo-classe de position" },
+        { "id": "d", "label": "Règle @keyframes" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Ciblage par attribut.", "incorrect": "Ce n’est pas `>` ou `+`." }
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "prompt": "À poids comparables (même importance, pas d’inline), que bat en général une règle avec **deux classes** devant une règle avec **un seul élément** ?",
+      "choices": [
+        { "id": "a", "label": "La règle avec deux classes (spécificité plus élevée)" },
+        { "id": "b", "label": "Toujours l’élément seul" },
+        { "id": "c", "label": "La première dans l’alphabet" },
+        { "id": "d", "label": "Celle déclarée dans le premier fichier chargé uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Classes > éléments en spécificité.", "incorrect": "Compare id > classe > élément." }
+    }
+  ]
+}

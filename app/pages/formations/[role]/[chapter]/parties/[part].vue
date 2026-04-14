@@ -368,8 +368,8 @@ function partSlugFromPath(path: string): string {
 }
 
 :deep(pre) {
-  background: #2d3748;
-  color: #e2e8f0;
+  /* background: #2d3748; */
+  /* color: #e2e8f0; */
   padding: 1rem;
   border-radius: 6px;
   overflow-x: auto;

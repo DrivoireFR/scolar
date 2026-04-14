@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 7 (Accessibilité & SEO bases)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Pourquoi une hiérarchie de titres cohérente est-elle importante ?",
+      "choices": [
+        { "id": "a", "label": "Elle facilite la navigation pour les technologies d’assistance et la compréhension du document" },
+        { "id": "b", "label": "Elle remplace le besoin de CSS" },
+        { "id": "c", "label": "Elle interdit l’usage de main" },
+        { "id": "d", "label": "Elle supprime l’obligation d’alt sur les images" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Outline logique.", "incorrect": "CSS et alt restent nécessaires." }
+    },
+    {
+      "id": "q2",
+      "type": "boolean",
+      "prompt": "Une image décorative peut avoir `alt=\"\"`.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Évite le bruit pour les lecteurs d’écran.", "incorrect": "C’est la recommandation pour décoratif." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Les landmarks sémantiques (`nav`, `main`, etc.) servent notamment à…",
+      "choices": [
+        { "id": "a", "label": "Permettre des raccourcis de navigation vers les grandes régions de la page" },
+        { "id": "b", "label": "Remplacer les titres h1–h6" },
+        { "id": "c", "label": "Désactiver le SEO" },
+        { "id": "d", "label": "Empêcher l’usage de formulaires" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Repères de page.", "incorrect": "Ils complètent les titres." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Bon exemple d’intitulé de lien accessible :",
+      "choices": [
+        { "id": "a", "label": "« Télécharger le programme détaillé (PDF, 2 Mo) »" },
+        { "id": "b", "label": "« Cliquez ici » seul" },
+        { "id": "c", "label": "« Lien » répété dix fois" },
+        { "id": "d", "label": "Une URL brute non contextuelle seule" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Contexte dans le libellé.", "incorrect": "Évite les libellés vagues." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Le `<title>` du document influence surtout…",
+      "choices": [
+        { "id": "a", "label": "L’onglet du navigateur et souvent le titre affiché dans les résultats de recherche" },
+        { "id": "b", "label": "La couleur de fond par défaut" },
+        { "id": "c", "label": "Le nombre de cœurs CPU utilisés" },
+        { "id": "d", "label": "Le type MIME du CSS" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Titre de document = UX + SEO.", "incorrect": "Pas de lien avec CPU." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`meta name=\"description\"` sert principalement à…",
+      "choices": [
+        { "id": "a", "label": "Fournir un résumé pouvant apparaître comme extrait dans les résultats" },
+        { "id": "b", "label": "Remplacer tout le contenu visible" },
+        { "id": "c", "label": "Bloquer l’indexation" },
+        { "id": "d", "label": "Définir la largeur du viewport (c’est le rôle de viewport)" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Snippet indicatif.", "incorrect": "viewport est une autre meta." }
+    },
+    {
+      "id": "q7",
+      "type": "boolean",
+      "prompt": "Un HTML sémantique propre contribue positivement à l’accessibilité et à la compréhension du contenu par les moteurs.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Base commune a11y / SEO.", "incorrect": "La sémantique aide les deux." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "L’attribut `lang` sur `<html>` est utile pour…",
+      "choices": [
+        { "id": "a", "label": "La synthèse vocale, la césure et l’interprétation linguistique du document" },
+        { "id": "b", "label": "Choisir automatiquement une police système sans CSS" },
+        { "id": "c", "label": "Désactiver les lecteurs d’écran" },
+        { "id": "d", "label": "Forcer le mode sombre" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Contexte linguistique.", "incorrect": "Pas de mode sombre magique." }
+    }
+  ]
+}

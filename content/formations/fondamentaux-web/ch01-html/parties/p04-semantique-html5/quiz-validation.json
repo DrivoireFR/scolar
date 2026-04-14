@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 4 (Sémantique HTML5)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Combien de `<main>` recommande-t-on typiquement par page (hors iframes) ?",
+      "choices": [
+        { "id": "a", "label": "Un seul" },
+        { "id": "b", "label": "Autant que de sections" },
+        { "id": "c", "label": "Exactement trois" },
+        { "id": "d", "label": "Zéro si un header est présent" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Un main = contenu principal unique.", "incorrect": "Le main est unique par document." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`<nav>` sert à regrouper…",
+      "choices": [
+        { "id": "a", "label": "Les blocs de navigation importants (menus de liens)" },
+        { "id": "b", "label": "Uniquement le pied de page légal" },
+        { "id": "c", "label": "Les images du carrousel" },
+        { "id": "d", "label": "Les scripts JavaScript" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Landmark navigation.", "incorrect": "Ce n’est pas réservé au footer." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`<article>` modélise surtout…",
+      "choices": [
+        { "id": "a", "label": "Un contenu autonome réutilisable (article, carte produit, commentaire…)" },
+        { "id": "b", "label": "Un bandeau publicitaire obligatoire" },
+        { "id": "c", "label": "La liste des meta tags" },
+        { "id": "d", "label": "Un tableau de données uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Contenu auto-contenu.", "incorrect": "Ce n’est pas une pub ni des meta." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Une `<section>` doit en principe…",
+      "choices": [
+        { "id": "a", "label": "Regrouper un thème avec souvent un titre de section" },
+        { "id": "b", "label": "Remplacer toujours `<p>`" },
+        { "id": "c", "label": "Ne jamais contenir de titre" },
+        { "id": "d", "label": "Servir uniquement de conteneur CSS sans sémantique" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Section = thématique.", "incorrect": "Évite section sans identité claire." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`<aside>` correspond plutôt à…",
+      "choices": [
+        { "id": "a", "label": "Du contenu tangent (encadré, liens connexes) par rapport au flux principal" },
+        { "id": "b", "label": "L’unique contenu principal obligatoire" },
+        { "id": "c", "label": "Un champ de formulaire" },
+        { "id": "d", "label": "Une ligne de tableau" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Complémentaire, pas le cœur.", "incorrect": "Le cœur est plutôt main/article." }
+    },
+    {
+      "id": "q6",
+      "type": "boolean",
+      "prompt": "On peut avoir plusieurs `<header>` ou `<footer>` dans un même document (ex. par section).",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Par section ou pour la page entière.", "incorrect": "Ce n’est pas limité à un seul par page." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Par rapport à un `<div>`, un élément sémantique comme `<article>` apporte surtout…",
+      "choices": [
+        { "id": "a", "label": "Un rôle explicite pour accessibilité, SEO et lecture du code" },
+        { "id": "b", "label": "Un style visuel imposé par le navigateur" },
+        { "id": "c", "label": "L’impossibilité d’appliquer du CSS" },
+        { "id": "d", "label": "La désactivation du JavaScript" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Sémantique = sens, pas l’apparence.", "incorrect": "Le style reste au CSS." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "Le `<header>` peut contenir typiquement…",
+      "choices": [
+        { "id": "a", "label": "Titre, logo, parfois recherche — en tête de page ou de section" },
+        { "id": "b", "label": "Uniquement le copyright" },
+        { "id": "c", "label": "Uniquement des `<td>`" },
+        { "id": "d", "label": "Les balises `<script>` uniquement" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "En-tête de contenu.", "incorrect": "Le copyright est souvent dans footer." }
+    }
+  ]
+}

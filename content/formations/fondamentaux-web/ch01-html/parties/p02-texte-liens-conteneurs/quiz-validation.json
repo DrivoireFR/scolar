@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 2 (Texte, liens, conteneurs)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Combien de niveaux de titres HTML existe-t-il et quel est l’usage recommandé pour `h1` ?",
+      "choices": [
+        { "id": "a", "label": "6 niveaux (`h1`–`h6`) ; un seul `h1` principal par page en général" },
+        { "id": "b", "label": "3 niveaux ; autant de `h1` que de sections" },
+        { "id": "c", "label": "10 niveaux ; `h1` réservé au pied de page" },
+        { "id": "d", "label": "1 niveau ; `h1` interdit" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Oui : six niveaux et hiérarchie logique.", "incorrect": "Il y a six niveaux de titres en HTML." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Quelle balise représente typiquement un paragraphe de texte courant ?",
+      "choices": [
+        { "id": "a", "label": "<p>" },
+        { "id": "b", "label": "<br>" },
+        { "id": "c", "label": "<hr>" },
+        { "id": "d", "label": "<span>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Le paragraphe est `<p>`.", "incorrect": "`<br>` est un saut de ligne, pas un paragraphe." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "À quoi sert principalement `<br>` ?",
+      "choices": [
+        { "id": "a", "label": "Forcer un saut de ligne à l’intérieur d’un bloc de texte" },
+        { "id": "b", "label": "Créer une bordure entre deux colonnes CSS" },
+        { "id": "c", "label": "Définir un titre de niveau 2" },
+        { "id": "d", "label": "Insérer une image" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "`<br>` = line break.", "incorrect": "Ne confonds pas avec `<hr>` ou les titres." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "Sémantiquement, `<hr>` représente plutôt…",
+      "choices": [
+        { "id": "a", "label": "Une rupture thématique entre blocs de contenu" },
+        { "id": "b", "label": "Un lien hypertexte" },
+        { "id": "c", "label": "Une liste ordonnée" },
+        { "id": "d", "label": "Un champ de formulaire" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Oui : séparation de contenu, pas qu’une ligne jolie.", "incorrect": "La décoration pure relève du CSS." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Quelle balise exprime une importance forte **sémantique** ?",
+      "choices": [
+        { "id": "a", "label": "<strong>" },
+        { "id": "b", "label": "<b> uniquement dans tous les cas" },
+        { "id": "c", "label": "<i>" },
+        { "id": "d", "label": "<mark>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "`<strong>` porte du sens d’importance.", "incorrect": "`<b>` est plutôt typographique sans sens fort par défaut." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`<b>` est surtout adapté pour…",
+      "choices": [
+        { "id": "a", "label": "Attirer l’œil sans nécessairement changer le sens linguistique mis en avant" },
+        { "id": "b", "label": "Remplacer systématiquement `<strong>` pour l’accessibilité" },
+        { "id": "c", "label": "Marquer une citation longue" },
+        { "id": "d", "label": "Créer un lien" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Gras typographique vs emphase sémantique.", "incorrect": "On ne remplace pas toujours `strong` par `b`." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Quelle balise marque une emphase linguistique (stress) ?",
+      "choices": [
+        { "id": "a", "label": "<em>" },
+        { "id": "b", "label": "<sub>" },
+        { "id": "c", "label": "<pre>" },
+        { "id": "d", "label": "<div>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "`<em>` = emphase.", "incorrect": "`<i>` peut être italique sans emphase sémantique selon l’usage." }
+    },
+    {
+      "id": "q8",
+      "type": "boolean",
+      "prompt": "`<i>` peut servir pour un passage en voix ou ton différent (ex. terme étranger) sans emphase `em`.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Oui : italique typographique ≠ toujours emphase.", "incorrect": "Relis la différence `i` / `em`." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "`<mark>` sert surtout à…",
+      "choices": [
+        { "id": "a", "label": "Mettre en évidence du texte pertinent ou référencé (ex. surlignage de recherche)" },
+        { "id": "b", "label": "Définir le titre principal obligatoire" },
+        { "id": "c", "label": "Créer une puce de liste" },
+        { "id": "d", "label": "Chiffrer le document" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Surlignage sémantique de pertinence.", "incorrect": "Ce n’est pas un titre ni une liste." }
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "prompt": "Pour un exposant mathématique (ex. x²), on utilise plutôt…",
+      "choices": [
+        { "id": "a", "label": "<sup>" },
+        { "id": "b", "label": "<sub>" },
+        { "id": "c", "label": "<small>" },
+        { "id": "d", "label": "<u>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Exposant = sup.", "incorrect": "Indice = sub." }
+    },
+    {
+      "id": "q11",
+      "type": "single",
+      "prompt": "Pour un indice (ex. H₂O), on utilise plutôt…",
+      "choices": [
+        { "id": "a", "label": "<sub>" },
+        { "id": "b", "label": "<sup>" },
+        { "id": "c", "label": "<mark>" },
+        { "id": "d", "label": "<em>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Indice = sub.", "incorrect": "Ne confonds pas sub et sup." }
+    },
+    {
+      "id": "q12",
+      "type": "single",
+      "prompt": "Quelle balise préserve espaces et retours à la ligne du texte qu’elle contient ?",
+      "choices": [
+        { "id": "a", "label": "<pre>" },
+        { "id": "b", "label": "<p>" },
+        { "id": "c", "label": "<span>" },
+        { "id": "d", "label": "<a>" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Préformaté = pre.", "incorrect": "Le texte normal dans `<p>` collapse les espaces." }
+    },
+    {
+      "id": "q13",
+      "type": "single",
+      "prompt": "Quel attribut est **obligatoire** pour un lien `<a>` fonctionnel vers une ressource ?",
+      "choices": [
+        { "id": "a", "label": "href" },
+        { "id": "b", "label": "src" },
+        { "id": "c", "label": "alt" },
+        { "id": "d", "label": "rel seul sans href" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "`href` pointe vers la cible.", "incorrect": "`src` est plutôt médias/scripts." }
+    },
+    {
+      "id": "q14",
+      "type": "single",
+      "prompt": "Pour ouvrir un lien dans un nouvel onglet, on combine souvent `target=\"_blank\"` avec…",
+      "choices": [
+        { "id": "a", "label": "rel=\"noopener noreferrer\" (bonne pratique sécurité / vie privée)" },
+        { "id": "b", "label": "charset=\"UTF-16\"" },
+        { "id": "c", "label": "method=\"POST\"" },
+        { "id": "d", "label": "type=\"checkbox\"" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Oui pour limiter l’accès à `window.opener`.", "incorrect": "Pense aux risques de `_blank` sans `noopener`." }
+    },
+    {
+      "id": "q15",
+      "type": "single",
+      "prompt": "Différence principale entre `div` et `span` ?",
+      "choices": [
+        { "id": "a", "label": "`div` est un conteneur bloc ; `span` est un conteneur en ligne" },
+        { "id": "b", "label": "`span` est bloc et `div` est toujours en ligne" },
+        { "id": "c", "label": "Les deux sont sémantiques par défaut" },
+        { "id": "d", "label": "`div` crée obligatoirement un lien" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Bloc vs inline générique.", "incorrect": "Ni l’un ni l’autre n’apporte de sémantique forte seule." }
+    }
+  ]
+}

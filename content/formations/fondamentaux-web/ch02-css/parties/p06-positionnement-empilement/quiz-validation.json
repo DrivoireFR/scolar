@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 6 (Positionnement)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "`position: relative` déplace l’élément…",
+      "choices": [
+        { "id": "a", "label": "Par rapport à sa position d’origine dans le flux" },
+        { "id": "b", "label": "Toujours par rapport au viewport uniquement" },
+        { "id": "c", "label": "Sans jamais conserver l’espace d’origine" },
+        { "id": "d", "label": "Hors du DOM" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Offset depuis le flux normal.", "incorrect": "fixed serait viewport." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`position: absolute` positionne l’élément par rapport à…",
+      "choices": [
+        { "id": "a", "label": "L’ancêtre positionné le plus proche (sinon le contenant initial)" },
+        { "id": "b", "label": "Toujours le premier `<p>`" },
+        { "id": "c", "label": "Uniquement un parent `display:flex` sans autre condition" },
+        { "id": "d", "label": "La balise `<html>` uniquement si z-index > 0" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Cherche le containing block positionné.", "incorrect": "Ce n’est pas arbitraire." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`position: fixed` ancre l’élément…",
+      "choices": [
+        { "id": "a", "label": "Au viewport (fenêtre d’affichage)" },
+        { "id": "b", "label": "Au premier float" },
+        { "id": "c", "label": "À la racine uniquement si display:none" },
+        { "id": "d", "label": "Dans le flux normal sans scroll" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Barres fixes, modales plein écran.", "incorrect": "Ce n’est pas le flux." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`sticky` se comporte comme…",
+      "choices": [
+        { "id": "a", "label": "Relatif jusqu’à un seuil de défilement puis fixe dans son conteneur" },
+        { "id": "b", "label": "Toujours identique à static" },
+        { "id": "c", "label": "Un float obligatoire" },
+        { "id": "d", "label": "display:none sur mobile" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "En-têtes de tableau / nav collante.", "incorrect": "Ce n’est pas static." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "Pour les layouts de page modernes, on préfère en général…",
+      "choices": [
+        { "id": "a", "label": "Flexbox ou Grid plutôt que des floats généralisés" },
+        { "id": "b", "label": "Uniquement des tables HTML pour tout" },
+        { "id": "c", "label": "position:absolute sur tous les paragraphes" },
+        { "id": "d", "label": "z-index sans position" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Float = cas limités.", "incorrect": "Tables de mise en page = anti-pattern." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`z-index` contrôle…",
+      "choices": [
+        { "id": "a", "label": "L’ordre d’empilement sur l’axe Z dans un contexte d’empilement" },
+        { "id": "b", "label": "La largeur minimale du texte" },
+        { "id": "c", "label": "La vitesse d’animation GPU seule" },
+        { "id": "d", "label": "Le nombre de colonnes grid" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Profondeur visuelle.", "incorrect": "Pas la largeur du texte." }
+    },
+    {
+      "id": "q7",
+      "type": "boolean",
+      "prompt": "Des propriétés comme `transform` ou `opacity` peuvent créer un nouveau contexte d’empilement.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "D’où les surprises de z-index.", "incorrect": "Les stacking contexts sont réels." }
+    }
+  ]
+}

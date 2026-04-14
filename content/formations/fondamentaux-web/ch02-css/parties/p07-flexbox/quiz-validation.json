@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 7 (Flexbox)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Quelle propriété active Flexbox sur un conteneur ?",
+      "choices": [
+        { "id": "a", "label": "display: flex" },
+        { "id": "b", "label": "position: flex" },
+        { "id": "c", "label": "float: flex" },
+        { "id": "d", "label": "grid: flex" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "display flex ou inline-flex.", "incorrect": "Pas de position:flex." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`flex-direction: column` définit…",
+      "choices": [
+        { "id": "a", "label": "L’axe principal vertical (les items s’empilent en colonne)" },
+        { "id": "b", "label": "Une grille 12 colonnes" },
+        { "id": "c", "label": "Un positionnement fixed" },
+        { "id": "d", "label": "L’interdiction du gap" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Axe principal = colonne.", "incorrect": "Ce n’est pas CSS Grid." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`justify-content` agit sur…",
+      "choices": [
+        { "id": "a", "label": "L’axe principal du conteneur flex" },
+        { "id": "b", "label": "L’axe secondaire uniquement" },
+        { "id": "c", "label": "La profondeur z-index" },
+        { "id": "d", "label": "Le charset du document" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Distribution sur l’axe main.", "incorrect": "align-items = cross." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`align-items` sur une seule ligne flex contrôle…",
+      "choices": [
+        { "id": "a", "label": "L’alignement sur l’axe secondaire" },
+        { "id": "b", "label": "La largeur du viewport" },
+        { "id": "c", "label": "Le nombre de colonnes grid" },
+        { "id": "d", "label": "La couleur de fond du body" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Cross-axis single line.", "incorrect": "justify-content = main." }
+    },
+    {
+      "id": "q5",
+      "type": "single",
+      "prompt": "`gap` sur un conteneur flex…",
+      "choices": [
+        { "id": "a", "label": "Ajoute un espace entre les items sans marges manuelles" },
+        { "id": "b", "label": "Supprime tous les flex items" },
+        { "id": "c", "label": "Remplace flex-direction" },
+        { "id": "d", "label": "Désactive wrap" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Espacement uniforme.", "incorrect": "gap ne supprime pas les items." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "`flex-wrap: wrap` permet…",
+      "choices": [
+        { "id": "a", "label": "De passer les items à la ligne quand l’espace manque" },
+        { "id": "b", "label": "De figer une seule ligne obligatoire" },
+        { "id": "c", "label": "De désactiver justify-content" },
+        { "id": "d", "label": "De transformer le conteneur en table" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Multiligne possible.", "incorrect": "nowrap serait une ligne." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "Dans `flex: 1 1 200px`, le premier `1` correspond à…",
+      "choices": [
+        { "id": "a", "label": "flex-grow" },
+        { "id": "b", "label": "flex-basis" },
+        { "id": "c", "label": "gap" },
+        { "id": "d", "label": "order" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "grow shrink basis.", "incorrect": "Ordre = grow, shrink, basis." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "Pourquoi mettre `min-width: 0` sur un flex item qui contient du texte long ?",
+      "choices": [
+        { "id": "a", "label": "Permettre au item de rétrécir sous sa taille de contenu et éviter le débordement" },
+        { "id": "b", "label": "Forcer une largeur minimale infinie" },
+        { "id": "c", "label": "Désactiver flex-grow" },
+        { "id": "d", "label": "Cacher le texte" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Astuce overflow flex.", "incorrect": "min-width:auto par défaut bloque souvent." }
+    }
+  ]
+}

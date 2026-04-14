@@ -10,46 +10,53 @@ Tu vas intégrer progressivement une maquette Figma en HTML/CSS et déployer un 
 
 ```
 📁 fondamentaux-web-integration/
-  ├── ch01-start/          # Point de départ (TP + Projet Progressif)
+  ├── ch01-start/          # Point de départ fil rouge (après ch. HTML + ch. CSS)
   │   ├── figma-mockup.md  # Référence à la maquette Figma
   │   ├── index.html       # Fichier starter (structure basique)
-  │   └── styles.css       # Fichier CSS vide
+  │   └── styles.css       # Fichier CSS vide ou minimal
   │
-  ├── ch01-end/            # Solution complète du chapitre 1
+  ├── ch01-end/            # Solution de référence (intégration HTML + CSS complète)
   │   ├── index.html       # HTML intégré complet
   │   ├── styles.css       # CSS complète
   │   ├── assets/          # Images, polices, etc.
   │   └── README.md        # Explications de la solution
   │
-  ├── ch02-start/          # (À venir) Point de départ chapitre 2
-  ├── ch02-end/            # (À venir) Solution chapitre 2
+  ├── ch02-start/          # (À venir) Point de départ après le module JavaScript
+  ├── ch02-end/            # (À venir) Solution associée
   │
   └── README.md            # Ce fichier
 ```
 
-## Chapitre 1 — Fondamentaux & Intégration Web
+## Parcours sur le site (formations)
 
-### 🎯 Objectif
+- **Chapitre 1 — HTML** : structure, sémantique, médias, formulaires, bases accessibilité / SEO.
+- **Chapitre 2 — CSS** : cascade, layout (Flexbox, Grid), responsive, bonnes pratiques.
+- Les **modalités TP / projet progressif** (fil rouge) sont en **fin de chapitre 2** : `/formations/fondamentaux-web/ch02-css/parties/p14-integration-pratique/`
+
+## Intégration HTML + CSS (fil rouge)
+
+### Objectif
 
 Intégrer une maquette Figma statique en HTML/CSS valide et responsive.
 
 **Compétences validées :**
-- Structure HTML sémantique (heading, nav, main, footer, etc.)
-- Flexbox pour les layouts
-- Responsive design (mobile-first)
-- CSS reset et bonnes pratiques
 
-### 📂 Ressources
+- Structure HTML sémantique (heading, nav, main, footer, etc.)
+- Flexbox et Grid pour les layouts
+- Responsive design (mobile-first)
+- Organisation CSS et bonnes pratiques
+
+### Ressources
 
 - **Départ** : `/ch01-start/`
 - **Solution de référence** : `/ch01-end/`
 - **Maquette Figma** : [Lien à définir par l'apprenant]
 
-### 🔗 Utilisation
+### Utilisation
 
-1. **Modalité TP Intensif** : Utilise `/ch01-start/` comme base pour les 3 TPs
-2. **Modalité Projet Progressif** : Commence à `/ch01-start/` et progresse vers `/ch01-end/`
-3. **Correction** : Compare avec `/ch01-end/` après soumission
+1. **Modalité TP intensif** : utilise `/ch01-start/` comme base pour les 3 TPs (fiche sur le site, chapitre 2).
+2. **Modalité projet progressif** : commence à `/ch01-start/` et progresse vers `/ch01-end/`.
+3. **Correction** : compare avec `/ch01-end/` après soumission.
 
 ## Conseils d'utilisation
 
@@ -60,10 +67,11 @@ Intégrer une maquette Figma statique en HTML/CSS valide et responsive.
 ## Déploiement
 
 Une fois ta solution complète :
+
 1. Pousse le code sur GitHub
 2. Active GitHub Pages
 3. Soumets ton évaluation avec le lien live
 
 ---
 
-**Bon courage ! 🚀**
+**Bon courage !**

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 14 (Intégration)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Les deux modalités (TP intensif et projet progressif) couvrent…",
+      "choices": [
+        { "id": "a", "label": "Les mêmes compétences HTML/CSS/responsive, avec un rythme différent" },
+        { "id": "b", "label": "Exclusivement du JavaScript" },
+        { "id": "c", "label": "Uniquement du SQL" },
+        { "id": "d", "label": "Aucun responsive" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Deux voies, un référentiel.", "incorrect": "Le périmètre est HTML/CSS." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "Le point de départ du fil rouge dans ce dépôt est…",
+      "choices": [
+        { "id": "a", "label": "`/projects/fondamentaux-web-integration/ch01-start/`" },
+        { "id": "b", "label": "`/node_modules/`" },
+        { "id": "c", "label": "Un dépôt externe obligatoire sans starter" },
+        { "id": "d", "label": "Uniquement un fichier .figma binaire" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Starter local du cours.", "incorrect": "Voir README du projet fil rouge." }
+    },
+    {
+      "id": "q3",
+      "type": "boolean",
+      "prompt": "Après cette partie, tu dois passer par la page d’évaluation du chapitre 2 avant de considérer le module terminé.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Auto-évaluation + seuil indicatif.", "incorrect": "L’évaluation clôt le chapitre." }
+    }
+  ]
+}

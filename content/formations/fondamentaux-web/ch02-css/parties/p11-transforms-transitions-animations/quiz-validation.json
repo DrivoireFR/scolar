@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 11 (Transforms & motion)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "`transform: rotate(5deg)`…",
+      "choices": [
+        { "id": "a", "label": "Fait pivoter l’élément visuellement sans changer son occupation du flux normal" },
+        { "id": "b", "label": "Change la couleur de fond obligatoirement" },
+        { "id": "c", "label": "Supprime l’élément du DOM" },
+        { "id": "d", "label": "Crée une grille 5 colonnes" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Transform sur la boîte peinte.", "incorrect": "Le flux block reste sauf position." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`transition` sert à…",
+      "choices": [
+        { "id": "a", "label": "Interpoler des valeurs CSS dans le temps entre deux états" },
+        { "id": "b", "label": "Importer un module JavaScript" },
+        { "id": "c", "label": "Définir uniquement la largeur du viewport" },
+        { "id": "d", "label": "Remplacer display:flex" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Animations d’état simples.", "incorrect": "Ce n’est pas un import JS." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Les animations `@keyframes` définissent…",
+      "choices": [
+        { "id": "a", "label": "Des étapes intermédiaires nommées ou en pourcentage" },
+        { "id": "b", "label": "Uniquement la couleur du texte sans variation" },
+        { "id": "c", "label": "Les colonnes d’une table HTML" },
+        { "id": "d", "label": "La meta viewport" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "keyframes = séquence.", "incorrect": "Pas lié à la table HTML." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "La propriété `animation` sur un élément utilise typiquement…",
+      "choices": [
+        { "id": "a", "label": "Un nom de @keyframes, une durée, une fonction de temps et éventuellement une itération" },
+        { "id": "b", "label": "Uniquement `color` sans nom" },
+        { "id": "c", "label": "Un fichier MP4" },
+        { "id": "d", "label": "Un attribut HTML `animate`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "animation: name duration ...", "incorrect": "Pas de balise animate en HTML natif ainsi." }
+    },
+    {
+      "id": "q5",
+      "type": "boolean",
+      "prompt": "Les transformations peuvent créer un nouveau contexte d’empilement (impact sur z-index).",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Comme opacity < 1, etc.", "incorrect": "Stacking context existe." }
+    }
+  ]
+}

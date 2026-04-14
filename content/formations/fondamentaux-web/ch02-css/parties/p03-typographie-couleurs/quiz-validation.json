@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 3 (Typographie & couleurs)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Pourquoi terminer `font-family` par une famille générique (`sans-serif`, etc.) ?",
+      "choices": [
+        { "id": "a", "label": "Assurer un repli si aucune police listée n’est disponible" },
+        { "id": "b", "label": "Désactiver le gras" },
+        { "id": "c", "label": "Forcer le chargement WOFF2 uniquement" },
+        { "id": "d", "label": "Remplacer le besoin de couleur" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Filet de sécurité typographique.", "incorrect": "Ce n’est pas lié au font-weight." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`font-size` en `rem` est relatif à…",
+      "choices": [
+        { "id": "a", "label": "La taille de police de l’élément racine (`html`)" },
+        { "id": "b", "label": "La largeur du viewport seulement" },
+        { "id": "c", "label": "La hauteur du `body` uniquement" },
+        { "id": "d", "label": "Un multiple fixe de 12px sans contexte" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "rem = root em.", "incorrect": "Ce n’est pas vw." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "Quelle valeur `font-weight` correspond souvent au gras courant ?",
+      "choices": [
+        { "id": "a", "label": "700" },
+        { "id": "b", "label": "100 uniquement" },
+        { "id": "c", "label": "400 pour du gras" },
+        { "id": "d", "label": "0" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "400 normal, 700 bold usuel.", "incorrect": "400 est souvent regular." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "`font-style: italic` sert à…",
+      "choices": [
+        { "id": "a", "label": "Afficher une variante italique de la police" },
+        { "id": "b", "label": "Augmenter l’interlignage uniquement" },
+        { "id": "c", "label": "Changer la couleur en gris" },
+        { "id": "d", "label": "Créer une grille CSS" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Italique typographique.", "incorrect": "Ce n’est pas line-height." }
+    },
+    {
+      "id": "q5",
+      "type": "boolean",
+      "prompt": "Le raccourci `font` peut combiner style, graisse, taille, interligne et famille en une seule propriété.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Syntaxe `font` à respecter précisément.", "incorrect": "C’est bien un shorthand." }
+    },
+    {
+      "id": "q6",
+      "type": "single",
+      "prompt": "Une police auto-hébergée se déclare typiquement avec…",
+      "choices": [
+        { "id": "a", "label": "`@font-face` pointant vers des fichiers (ex. WOFF2)" },
+        { "id": "b", "label": "`@import only screen` sans url" },
+        { "id": "c", "label": "Uniquement `font: url()`" },
+        { "id": "d", "label": "La balise `<video>`" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "@font-face + sources.", "incorrect": "Ce n’est pas la balise video." }
+    },
+    {
+      "id": "q7",
+      "type": "single",
+      "prompt": "La notation `#0f0` en CSS représente…",
+      "choices": [
+        { "id": "a", "label": "Une couleur hexadécimale courte (ici vert pur)" },
+        { "id": "b", "label": "Un sélecteur d’ID nommé 0f0" },
+        { "id": "c", "label": "Une unité de temps" },
+        { "id": "d", "label": "Une fonction de grille" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Hex #RGB ou #RRGGBB.", "incorrect": "Ce n’est pas un id CSS." }
+    },
+    {
+      "id": "q8",
+      "type": "single",
+      "prompt": "`rgb(255 0 0 / 0.5)` utilise…",
+      "choices": [
+        { "id": "a", "label": "La syntaxe moderne avec canal alpha en fin" },
+        { "id": "b", "label": "Une erreur : alpha n’existe pas en CSS" },
+        { "id": "c", "label": "Uniquement le mode HSL" },
+        { "id": "d", "label": "Une variable `--rgb` obligatoire" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "rgb avec slash alpha (CSS Color4).", "incorrect": "L’alpha est valide." }
+    },
+    {
+      "id": "q9",
+      "type": "single",
+      "prompt": "Le modèle HSL (`hsl(…)`) est apprécié pour…",
+      "choices": [
+        { "id": "a", "label": "Ajuster teinte, saturation et luminosité de façon intuitive" },
+        { "id": "b", "label": "Désactiver les couleurs sur le site" },
+        { "id": "c", "label": "Remplacer HTML par du SVG" },
+        { "id": "d", "label": "Compiler TypeScript" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Palettes et thèmes.", "incorrect": "Rien à voir avec TS." }
+    },
+    {
+      "id": "q10",
+      "type": "single",
+      "prompt": "Pour l’accessibilité, le contraste entre texte et arrière-plan doit être…",
+      "choices": [
+        { "id": "a", "label": "Suffisant (viser WCAG AA ou mieux selon le contexte)" },
+        { "id": "b", "label": "Le plus faible possible pour un look moderne" },
+        { "id": "c", "label": "Identique pour texte et fond" },
+        { "id": "d", "label": "Ignoré si la police est système" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Lisibilité = critère mesurable.", "incorrect": "Gris sur gris faible = problème." }
+    }
+  ]
+}

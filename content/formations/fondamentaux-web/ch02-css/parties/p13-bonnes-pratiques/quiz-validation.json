@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "title": "Quiz — Partie 13 (Bonnes pratiques)",
+  "description": "Une question par notion",
+  "shuffleQuestions": false,
+  "passingScorePercent": 70,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "single",
+      "prompt": "Pour le texte courant, un bon objectif de contraste est souvent…",
+      "choices": [
+        { "id": "a", "label": "Au moins WCAG AA pour la combinaison couleur de texte / fond" },
+        { "id": "b", "label": "Le ratio le plus faible possible" },
+        { "id": "c", "label": "Identique pour texte et fond" },
+        { "id": "d", "label": "Ignoré si la police est > 12px" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Lisibilité mesurable.", "incorrect": "Faible contraste = exclusion." }
+    },
+    {
+      "id": "q2",
+      "type": "single",
+      "prompt": "`:focus-visible` sert à…",
+      "choices": [
+        { "id": "a", "label": "Styliser l’anneau de focus quand il est pertinent (souvent clavier)" },
+        { "id": "b", "label": "Désactiver le clavier" },
+        { "id": "c", "label": "Cacher tout le texte" },
+        { "id": "d", "label": "Forcer dark mode" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Meilleur UX focus.", "incorrect": "Ne désactive pas le clavier." }
+    },
+    {
+      "id": "q3",
+      "type": "single",
+      "prompt": "`prefers-reduced-motion` permet de…",
+      "choices": [
+        { "id": "a", "label": "Adapter les animations aux utilisateurs qui limitent le mouvement" },
+        { "id": "b", "label": "Augmenter obligatoirement toutes les durées à 10s" },
+        { "id": "c", "label": "Désactiver le CSS entièrement" },
+        { "id": "d", "label": "Changer la langue du site" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Media feature accessibilité.", "incorrect": "Ce n’est pas i18n." }
+    },
+    {
+      "id": "q4",
+      "type": "single",
+      "prompt": "WOFF2 est souvent privilégié pour les polices web car…",
+      "choices": [
+        { "id": "a", "label": "Bon compromis compression / support navigateur moderne" },
+        { "id": "b", "label": "C’est le seul format autorisé par HTML" },
+        { "id": "c", "label": "Il remplace le besoin de HTML" },
+        { "id": "d", "label": "Il désactive le lazy loading" }
+      ],
+      "correctChoiceIds": ["a"],
+      "points": 1,
+      "feedback": { "correct": "Perf réseau.", "incorrect": "D’autres formats existent encore." }
+    },
+    {
+      "id": "q5",
+      "type": "boolean",
+      "prompt": "Supprimer `outline` sans offrir un style de focus équivalent est une mauvaise pratique d’accessibilité.",
+      "choices": [{ "id": "true", "label": "Vrai" }, { "id": "false", "label": "Faux" }],
+      "correctChoiceIds": ["true"],
+      "points": 1,
+      "feedback": { "correct": "Toujours un indicateur visible.", "incorrect": "Ne laisse pas le focus invisible." }
+    }
+  ]
+}
